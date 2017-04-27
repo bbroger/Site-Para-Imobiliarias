@@ -51,13 +51,14 @@ array_rand($imobiliaria_corretores);
     <title>Imóvel - <?= $imovel->BAIRRO.' - '.$imovel->ENDERECO ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/5b95069487.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="cor_<?= $imobiliaria_cor ?>/css/style.css" rel="stylesheet">
+    <link href="cor_<?= $imobiliaria_cor ?>/css/responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
