@@ -115,7 +115,19 @@ $(document).ready(function(){
         $container.masonry();
     });
 
+    /* modal as link */  
+    if(window.location.href.indexOf('#modal-quemsomos') != -1) {
+        $('#modal-quemsomos').modal('show');
+    }
 
+    if(window.location.href.indexOf('#modal-servicos') != -1) {
+        $('#modal-servicos').modal('show');
+    }
+
+    if(window.location.href.indexOf('#modal-contato') != -1) {
+        $('#modal-contato').modal('show');
+    }
+    
     /* modal */
     $('.modal').on('shown.bs.modal', function () {
         var curModal = this;

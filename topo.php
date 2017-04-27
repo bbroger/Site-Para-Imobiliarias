@@ -49,9 +49,13 @@
       NOSSO CRECI: <?= $imobiliaria_creci ?>
       </div>
       <div class="modal-footer">
-        <a href="<?= $imobiliaria_facebook ?>photos/?tab=albums" target="_blank" class="btn btn-danger btn-block btn-lg"><i class="fa fa-facebook"></i> Faça parte de nossa comunidade!</a>
+        <?php if ($imobiliaria_facebook){ ?>
+          <a href="<?= $imobiliaria_facebook ?>photos/?tab=albums" target="_blank" class="btn btn-danger btn-block btn-lg"><i class="fa fa-facebook"></i> Faça parte de nossa comunidade!</a>
+        <?php } ?>
         <br />
-        <a href="<?= $imobiliaria_android ?>" target="_blank" class="btn btn-danger btn-block btn-lg"><i class="fa fa-android"></i> Baixe nosso Aplicativo!</a>
+        <?php if ($imobiliaria_android){ ?>
+          <a href="<?= $imobiliaria_android ?>" target="_blank" class="btn btn-danger btn-block btn-lg"><i class="fa fa-android"></i> Baixe nosso Aplicativo!</a>
+        <?php } ?>
       </div>
     </div>
   </div>
