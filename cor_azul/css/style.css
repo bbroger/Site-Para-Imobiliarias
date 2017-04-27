@@ -1254,7 +1254,7 @@ input[type="color"]:focus,
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	background-image: url(../img/widget_header.png);
+	background-image: url(../../img/widget_header.png);
 	background-repeat: repeat-x;
 	background-position: bottom center;
 	margin-top: 20px;
