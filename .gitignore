@@ -11,8 +11,8 @@ error_log
 /data/*
 
 # Local image and files specific for a project
-foto_*.
-arquivo_*.
+foto_*
+arquivo_*
 
 # Windows thumbnail cache files
 Thumbs.db
