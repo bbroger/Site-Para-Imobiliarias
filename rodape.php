@@ -79,7 +79,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?language=pt-br?&key=<?= $api_js_google ?>"></script>
+<script src="http://maps.google.com/maps/api/js?language=pt-br?&key=<?= $api_js_google ?>"></script>
 <script src="https://cdn.jsdelivr.net/gmap3/7.2.0/gmap3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.5/jquery.jcarousel.min.js"></script>
