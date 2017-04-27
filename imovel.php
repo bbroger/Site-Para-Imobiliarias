@@ -235,7 +235,7 @@ array_rand($imobiliaria_corretores);
               </div>    
               <ul class="list-check">
                 <?php foreach($modelosQtde as $modelo){ ?>
-                  <li><a href="<?= $imobiliaria_site.'/busca.php?modelo='. $modelo->NOME ?>"><?= $modelo->NOME ?> (<?= $modelo->QTDE ?>)</a></li>
+                  <li><a href="<?= $imobiliaria_site.'/busca.php?modelo='. $modelo->NOME ?>"><b><?= $modelo->NOME ?></b> (<?= $modelo->QTDE ?>)</a></li>
                 <?php } ?>
               </ul>
             </div>
@@ -246,7 +246,7 @@ array_rand($imobiliaria_corretores);
               </div>    
               <ul>
                 <?php foreach($bairrosQtde as $bairro){ ?>
-                  <li><a href="<?= $imobiliaria_site.'/busca.php?bairro='. $bairro->NOME ?>"><?= $bairro->NOME ?> (<?= $bairro->QTDE ?>)</a></li>
+                  <li><a href="<?= $imobiliaria_site.'/busca.php?bairro='. $bairro->NOME ?>"><b><?= $bairro->NOME ?></b> (<?= $bairro->QTDE ?>)</a></li>
                 <?php } ?>
               </ul>
             </div>
