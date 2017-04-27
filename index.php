@@ -1,12 +1,11 @@
 <?php
-error_reporting(); //E_ERROR | E_WARNING | E_PARSE
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ini_set('display_errors', 1);
 
 require "configuracao.php";
 require "utilitario.php"; 
 require "restclient.php"; 
 
-echo $api.'RRR';
 $api = new RestClient(['base_url' => $api]);
 
 $bairros = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROS']);
@@ -68,13 +67,13 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <title><?= $imobiliaria_title ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/5b95069487.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="cor_<?= $imobiliaria_cor ?>/css/style.css" rel="stylesheet">
+    <link href="cor_<?= $imobiliaria_cor ?>/css/responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
