@@ -362,7 +362,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
             <div class="row">
               <div class="col-md-12">
                 <div class="heading-title heading-title-sm bg-white">
-                  <h2>Corretores</h2>
+                  <h2>Atendimento</h2>
                 </div>
               </div>
             </div>
