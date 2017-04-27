@@ -6,13 +6,13 @@
         <div class="widget">
             <h3>Busca Rápida</h3>
             <ul class="list-unstyled">
-            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade=FRANCA&modelo=TERRENO&ordem=VALOR%2Casc' ?>">Terrenos em Franca</a></li>
-            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade=FRANCA&modelo=APARTAMENTO&ordem=VALOR%2Casc' ?>">Apartamentos em Franca</a></li>
-            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade=FRANCA&modelo=CASA&ordem=VALOR%2Casc' ?>">Casas em Franca</a></li>
-            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade=FRANCA&modelo=COMERCIAL&ordem=VALOR%2Casc' ?>">Comércio em Franca</a></li>
-            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade=FRANCA&modelo=GALPÃO&ordem=VALOR%2Casc' ?>">Galpões em Franca</a></li>
+            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade='.$imobiliaria_cidade.'&modelo=TERRENO&ordem=VALOR%2Casc' ?>">Terrenos em <?= $imobiliaria_cidade ?></a></li>
+            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade='.$imobiliaria_cidade.'&modelo=APARTAMENTO&ordem=VALOR%2Casc' ?>">Apartamentos em <?= $imobiliaria_cidade ?></a></li>
+            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade='.$imobiliaria_cidade.'&modelo=CASA&ordem=VALOR%2Casc' ?>">Casas em <?= $imobiliaria_cidade ?></a></li>
+            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade='.$imobiliaria_cidade.'&modelo=COMERCIAL&ordem=VALOR%2Casc' ?>">Comércio em <?= $imobiliaria_cidade ?></a></li>
+            <li><a href="<?= $imobiliaria_site.'/busca.php?cidade='.$imobiliaria_cidade.'&modelo=GALPÃO&ordem=VALOR%2Casc' ?>">Galpões em <?= $imobiliaria_cidade ?></a></li>
             <?php if($imobiliaria_android){ ?>
-            <li><a href="<?= $imobiliaria_android ?>" target="_blank">Nosso App Android</a></li>
+                <li><a href="<?= $imobiliaria_android ?>" target="_blank">Nosso App Android</a></li>
             <?php } ?>
             </ul>
         </div>
