@@ -24,7 +24,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.html">Home</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
         <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos">Quem Somos</a></li>
         <li><a href="busca.php">Imóveis</a></li>
         <!-- <li><a href="#modal-servicos" data-toggle="modal" data-target="#modal-servicos">Serviços</a></li> -->

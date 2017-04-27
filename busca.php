@@ -181,7 +181,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                     </div>
                     <div class="form-group">
                       <label for="maxprice">&nbsp;</label>
-                      <input type="submit" name="submit" value="Busque Novamente" class="btn btn-danger btn-block">
+                      <input type="submit" name="submit" value="FILTRAR" class="btn btn-danger btn-block">
                     </div>
                   </div>
 
