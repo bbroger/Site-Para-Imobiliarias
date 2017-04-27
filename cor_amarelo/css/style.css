@@ -1820,7 +1820,7 @@ input[type="color"]:focus,
 	width: 100%;
 	padding: 60px 0 55px;
 	background-color: #f4f4f4;
-	background-image: url(../img/bgfooter.png);
+	background-image: url(img/bgfooter.png);
 	-webkit-background-size: cover !important;
 	   -moz-background-size: cover !important;
 	 	-ms-background-size: cover !important;
