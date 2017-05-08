@@ -94,7 +94,7 @@ array_rand($imobiliaria_corretores);
                         <label for="country">Tipos</label>
                         <select class="form-control" name="tipo">
                         <?php foreach($imovel_tipos as $tipo){ ?>
-                          <option value="<?= $tipo ?>" <?= $tipo == $imovel->TIPO? 'selected': '' ?>><?= $tipo ?></option>
+                          <option value="<?= $tipo ?>" <?= $tipo == $imovel->FINALIDADE? 'selected': '' ?>><?= $tipo ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -115,7 +115,7 @@ array_rand($imobiliaria_corretores);
                         <select class="form-control" name='modelo'>
                         <option value="">TODOS</option>
                         <?php foreach($modelos as $modelo){ ?>
-                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $imovel->MODELO? 'selected': '' ?>><?= $modelo->NOME ?></option>
+                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $imovel->TIPO? 'selected': '' ?>><?= $modelo->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -160,8 +160,8 @@ array_rand($imobiliaria_corretores);
               </div>
             </div>
             <ol class="breadcrumb">
+                <li class="active"><?= $imovel->FINALIDADE ?></li>
                 <li class="active"><?= $imovel->TIPO ?></li>
-                <li class="active"><?= $imovel->MODELO ?></li>
                 <li class="active"><?= $imovel->CIDADE ?></li>
                 <li class="active"><?= $imovel->BAIRRO ?></li>
                 <li class="active"><?= formataDinheiro($imovel->VALOR) ?></li>
