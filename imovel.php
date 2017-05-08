@@ -8,11 +8,20 @@ require "restclient.php";
 
 $api = new RestClient(['base_url' => $api]);
 
+$bairros = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROS']);
+$bairros = recuperaArray($bairros);
+
 $bairrosQtde = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROSQTDE']);
 $bairrosQtde = recuperaArray($bairrosQtde);
 
+$modelos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
+$modelos = recuperaArray($modelos);
+
 $modelosQtde = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOSQTDE']);
 $modelosQtde = recuperaArray($modelosQtde);
+
+$cidades = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'CIDADES']);
+$cidades = recuperaArray($cidades);
 
 if ( empty($_REQUEST['codigo']) )
   $codigo = 0;
@@ -85,7 +94,7 @@ array_rand($imobiliaria_corretores);
                         <label for="country">Tipos</label>
                         <select class="form-control" name="tipo">
                         <?php foreach($imovel_tipos as $tipo){ ?>
-                          <option value="<?= $tipo ?>" <?= $tipo == $_REQUEST['tipo']? 'selected': '' ?>><?= $tipo ?></option>
+                          <option value="<?= $tipo ?>" <?= $tipo == $imovel->TIPO? 'selected': '' ?>><?= $tipo ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -94,7 +103,7 @@ array_rand($imobiliaria_corretores);
                           <select class="form-control" name='valor'>
                           <option value="">TODOS</option>
                           <?php foreach($imovel_valores as $valor=>$nome){ ?>
-                            <option value="<?= $valor ?>" <?= $valor == $_REQUEST['valor']? 'selected': '' ?>><?= $nome ?></option>
+                            <option value="<?= $valor ?>"><?= $nome ?></option>
                           <?php } ?>
                           </select>
                     </div>
@@ -106,13 +115,13 @@ array_rand($imobiliaria_corretores);
                         <select class="form-control" name='modelo'>
                         <option value="">TODOS</option>
                         <?php foreach($modelos as $modelo){ ?>
-                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $_REQUEST['modelo']? 'selected': '' ?>><?= $modelo->NOME ?></option>
+                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $imovel->MODELO? 'selected': '' ?>><?= $modelo->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>
                     <div class="form-group">
                       <label for="maxprice">Código</label>
-                      <input type="number" name="codigo" value="<?= empty($_REQUEST['codigo'])? '': $_REQUEST['codigo'] ?>" class="form-control" placeholder="0000">
+                      <input type="number" name="codigo" value="" class="form-control" placeholder="0000">
                     </div>
                   </div>
                   <!-- break -->
@@ -122,7 +131,7 @@ array_rand($imobiliaria_corretores);
                           <select class="form-control" name='cidade'>
                           <option value="">TODAS</option>
                           <?php foreach($cidades as $cidade){ ?>
-                            <option value="<?= $cidade->NOME ?>" <?= $cidade->NOME == $_REQUEST['cidade']? 'selected': '' ?>><?= $cidade->NOME ?></option>
+                            <option value="<?= $cidade->NOME ?>" <?= $cidade->NOME == $imovel->CIDADE? 'selected': '' ?>><?= $cidade->NOME ?></option>
                           <?php } ?>
                           </select>
                     </div>
@@ -137,7 +146,7 @@ array_rand($imobiliaria_corretores);
                         <select class="form-control" name='bairro'>
                         <option value="">TODOS</option>
                         <?php foreach($bairros as $bairro){ ?>
-                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $_REQUEST['bairro']? 'selected': '' ?>><?= $bairro->NOME ?></option>
+                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $imovel->BAIRRO? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -151,21 +160,11 @@ array_rand($imobiliaria_corretores);
               </div>
             </div>
             <ol class="breadcrumb">
-              <?php if (!empty($_REQUEST['tipo'])) { ?>
-                <li class="active"><?= $_REQUEST['tipo'] ?></li>
-              <?php } ?>
-              <?php if (!empty($_REQUEST['modelo'])) { ?>
-                <li class="active"><?= $_REQUEST['modelo'] ?></li>
-              <?php } ?>
-              <?php if (!empty($_REQUEST['cidade'])) { ?>
-                <li class="active"><?= $_REQUEST['cidade'] ?></li>
-              <?php } ?>
-              <?php if (!empty($_REQUEST['bairro'])) { ?>
-                <li class="active"><?= $_REQUEST['bairro'] ?></li>
-              <?php } ?>
-              <?php if (!empty($_REQUEST['valor'])) { ?>
-                <li class="active"><?= $_REQUEST['valor'] ?></li>
-              <?php } ?>
+                <li class="active"><?= $imovel->TIPO ?></li>
+                <li class="active"><?= $imovel->MODELO ?></li>
+                <li class="active"><?= $imovel->CIDADE ?></li>
+                <li class="active"><?= $imovel->BAIRRO ?></li>
+                <li class="active"><?= formataDinheiro($imovel->VALOR) ?></li>
             </ol>
           </div>
         </div>
