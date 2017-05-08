@@ -260,7 +260,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                   <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="property-container">
                       <div class="property-image">
-                        <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>"><img src="/fotos_imoveis/<?= getFotoFachada($imovel->ID_IMOVEL) ?>" alt="<?= $imovel->ENDERECO ?>"></a>
+                        <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>"><img src="/fotos_imoveis/<?= getFotoFachada($imovel->ID_IMOVEL) ?>" alt="<?= in_array("ENDERECO", $imobiliaria_retirar)? '':$imovel->ENDERECO ?>"></a>
                         <div class="property-price">
                         <span><?= formataDinheiro($imovel->VALOR) ?></span>
                       </div>
@@ -276,7 +276,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                       </div>
                       <div class="property-content">
                         <h4><?= $imovel->TIPO ?></h4>
-                        <h3><a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>".><?= $imovel->BAIRRO ?></a> <small><?= $imovel->ENDERECO ?></small></h3>
+                        <h3><a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>".><?= $imovel->BAIRRO ?></a> <small><?= in_array("ENDERECO", $imobiliaria_retirar)? '':$imovel->ENDERECO ?></small></h3>
                       </div>
                     </div>
                   </div>

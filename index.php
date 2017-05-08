@@ -199,7 +199,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                 <span><i class="fa fa-car"></i> <?= $imovel->GARAGEM ?> Garagem.</span>
               </div>
               <div class="property-content">
-                <h3><a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>"><?= $imovel->BAIRRO ?></a> <small><?= $imovel->ENDERECO ?></small></h3>
+                <h3><a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>"><?= $imovel->BAIRRO ?></a> <small><?= in_array("ENDERECO", $imobiliaria_retirar)? '': $imovel->ENDERECO ?></small></h3>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                 </div>
               </div>
               <div class="property-content">
-                <h3><a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>"><?= $imovel->BAIRRO ?></a> <small><?= $imovel->ENDERECO ?></small></h3>
+                <h3><a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>"><?= $imovel->BAIRRO ?></a> <small><?= in_array("ENDERECO", $imobiliaria_retirar)? '': $imovel->ENDERECO ?></small></h3>
                 <p><?= $imovel->DESCRICAO ?></p>
               </div>
               <div class="property-features">

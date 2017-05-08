@@ -57,7 +57,7 @@ array_rand($imobiliaria_corretores);
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
 
-    <title>Imóvel - <?= $imovel->BAIRRO.' - '.$imovel->ENDERECO ?></title>
+    <title>Imóvel, <?= $imovel->BAIRRO.', '. $imovel->ID_IMOVEL .', '. (in_array("ENDERECO", $imobiliaria_retirar)? '': $imovel->ENDERECO) ?></title>
 
     <!-- Bootstrap core CSS -->
     <!-- Bootstrap core CSS -->
@@ -237,7 +237,7 @@ array_rand($imobiliaria_corretores);
                           </tr>
                           <tr>
                             <td><strong>Endereço</strong></td>
-                            <td><?= $imovel->ENDERECO .', '. $imovel->BAIRRO .', '. $imovel->CIDADE .'-'. $imovel->ESTADO ?></td>
+                            <td><?= (in_array("ENDERECO", $imobiliaria_retirar)? '': $imovel->ENDERECO) .', '. $imovel->BAIRRO .', '. $imovel->CIDADE .'-'. $imovel->ESTADO ?></td>
                           </tr>
                           <tr>
                             <td><strong>Área</strong></td>
