@@ -18,6 +18,7 @@
     $imobiliaria_logo_facebook = $imobiliaria_site."/img/foto_logo_facebook.jpg";
     $imobiliaria_logo_favicon = "img/foto_logo_pequeno.png";
     $imobiliaria_cor = "vermelho"; # amarelo, azul, laranja, verde, vermelho
+    $imobiliaria_retirar = array("ENDERECO"); // qualquer área que vc deseja bloquear
     $imobiliaria_chaves = "Para o Google encontrar o site...";
     $imobiliaria_descricao = "Para sair na descrição do Facebook...";
     $imobiliaria_quemsomos = "Para sair no Quem Somos...";
@@ -53,6 +54,14 @@
                                 'LINK'=>'https://www.facebook.com/linkPost'],
                             );
 
+    $imobiliaria_departamentos = array(
+                                ['NOME'=>'Informações de Imóveis', //OBRIGATORIO - Usado no form do imóvel
+                                'EMAIL'=>'nome@nome.com.br,nome@nome.com.br'], 
+                                ['NOME'=>'Dúvidas sobre Vendas',
+                                'EMAIL'=>'nome@nome.com.br,nome@nome.com.br'], 
+                                ['NOME'=>'Sugestões e Reclamações',
+                                'EMAIL'=>'nome@nome.com.br'], 
+                            );
 
     $imovel_tipos = array("Locação", "Venda"); # Ou Temporada
     $imovel_valores = array(
