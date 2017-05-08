@@ -71,6 +71,109 @@ array_rand($imobiliaria_corretores);
 
 <?php include 'topo.php'; ?>
 
+
+    <!-- begin:header -->
+    <div id="header" class="heading" style="background-image: url(/fotos_imoveis/<?= getFotoFachada($imovel->ID_IMOVEL) ?>);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="quick-search">
+              <div class="row">
+                <form role="form" action="busca.php" method="GET">
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="form-group">
+                        <label for="country">Tipos</label>
+                        <select class="form-control" name="tipo">
+                        <?php foreach($imovel_tipos as $tipo){ ?>
+                          <option value="<?= $tipo ?>" <?= $tipo == $_REQUEST['tipo']? 'selected': '' ?>><?= $tipo ?></option>
+                        <?php } ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                       <label for="valor">Valor</label>
+                          <select class="form-control" name='valor'>
+                          <option value="">TODOS</option>
+                          <?php foreach($imovel_valores as $valor=>$nome){ ?>
+                            <option value="<?= $valor ?>" <?= $valor == $_REQUEST['valor']? 'selected': '' ?>><?= $nome ?></option>
+                          <?php } ?>
+                          </select>
+                    </div>
+                  </div>
+                  <!-- break -->
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="form-group">
+                      <label for="status">Modelos</label>
+                        <select class="form-control" name='modelo'>
+                        <option value="">TODOS</option>
+                        <?php foreach($modelos as $modelo){ ?>
+                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $_REQUEST['modelo']? 'selected': '' ?>><?= $modelo->NOME ?></option>
+                        <?php } ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="maxprice">Código</label>
+                      <input type="number" name="codigo" value="<?= empty($_REQUEST['codigo'])? '': $_REQUEST['codigo'] ?>" class="form-control" placeholder="0000">
+                    </div>
+                  </div>
+                  <!-- break -->
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="form-group">
+                        <label for="location">Cidades</label>
+                          <select class="form-control" name='cidade'>
+                          <option value="">TODAS</option>
+                          <?php foreach($cidades as $cidade){ ?>
+                            <option value="<?= $cidade->NOME ?>" <?= $cidade->NOME == $_REQUEST['cidade']? 'selected': '' ?>><?= $cidade->NOME ?></option>
+                          <?php } ?>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                      &nbsp;
+                    </div>
+                  </div>
+                  <!-- break -->
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="form-group">
+                        <label for="location">Bairros</label>
+                        <select class="form-control" name='bairro'>
+                        <option value="">TODOS</option>
+                        <?php foreach($bairros as $bairro){ ?>
+                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $_REQUEST['bairro']? 'selected': '' ?>><?= $bairro->NOME ?></option>
+                        <?php } ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="maxprice">&nbsp;</label>
+                      <input type="submit" name="submit" value="FILTRAR" class="btn btn-danger btn-block">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+            <ol class="breadcrumb">
+              <?php if (!empty($_REQUEST['tipo'])) { ?>
+                <li class="active"><?= $_REQUEST['tipo'] ?></li>
+              <?php } ?>
+              <?php if (!empty($_REQUEST['modelo'])) { ?>
+                <li class="active"><?= $_REQUEST['modelo'] ?></li>
+              <?php } ?>
+              <?php if (!empty($_REQUEST['cidade'])) { ?>
+                <li class="active"><?= $_REQUEST['cidade'] ?></li>
+              <?php } ?>
+              <?php if (!empty($_REQUEST['bairro'])) { ?>
+                <li class="active"><?= $_REQUEST['bairro'] ?></li>
+              <?php } ?>
+              <?php if (!empty($_REQUEST['valor'])) { ?>
+                <li class="active"><?= $_REQUEST['valor'] ?></li>
+              <?php } ?>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end:header -->
+
+
     <!-- begin:content -->
     <div id="content">
       <div class="container">
