@@ -108,6 +108,17 @@
       </div>
       <div class="modal-body">
           <div class="form-group">
+            <select class="form-control" name='departamento' required="true">
+              <option value="">DEPARTAMENTO</option>
+              <?php foreach($imobiliaria_departamentos as $imobiliaria_departamento){ ?>
+                <option value="<?= $imobiliaria_departamento['EMAIL'] ?>"><?= $imobiliaria_departamento['NOME'] ?></option>
+              <?php } ?>
+            </select>
+          </div>
+
+
+
+          <div class="form-group">
             <input type="text" name="nome" class="form-control input-lg" placeholder="Seu nome..." required="true">
           </div>
           <div class="form-group">

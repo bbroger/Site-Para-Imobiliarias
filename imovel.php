@@ -190,7 +190,7 @@ array_rand($imobiliaria_corretores);
                   <div class="tab-pane fade in active" id="detail">
                     <div class="row">
                       <div class="col-md-12">
-                        <h2><?= $imovel->BAIRRO ?></h2>
+                        <h2>IMÓVEL NO BAIRRO <?= $imovel->BAIRRO ?></h2>
                         <div id="slider-property" class="carousel slide" data-ride="carousel">
                           <ol class="carousel-indicators">
                             <li data-target="#slider-property" data-slide-to="0" class="">
