@@ -378,9 +378,9 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                         <h2><a href="#"><?= $corretor['NOME'] ?></a></h2>
                       </div>
                       <div class="post-meta">
-                        <span><i class="fa fa-envelope-o"></i> <?= $corretor['EMAIL'] ?></span><br>
                         <span><i class="fa fa-phone"></i> <a href="tel:"><?= $corretor['TELEFONE'] ?></a></span><br>
                         <span><i class="fa fa-whatsapp"></i> <a href="whatsapp://send?text=Olá <?= $corretor['NOME'] ?>!&phone=+55<?= $corretor['WHATSAPP'] ?>"><?= $corretor['WHATSAPP'] ?></a></span>
+                        <span><i class="fa fa-envelope-o"></i> <?= $corretor['EMAIL'] ?></span><br>
                       </div>
                     </div>
                   </div>
