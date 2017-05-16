@@ -6,7 +6,7 @@ require "configuracao.php";
 require "utilitario.php"; 
 require "restclient.php"; 
 var_dump( $api );
-die();
+die('FIM');
 $api = new RestClient(['base_url' => $api]);
 
 $bairros = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROS']);
