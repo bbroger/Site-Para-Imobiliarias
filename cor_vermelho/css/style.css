@@ -1389,7 +1389,7 @@ input[type="color"]:focus,
 	==================
 */
 #testimony{
-	/* position: relative; */
+	position: relative;
 	width: 100%;
 	min-height: 450px;
 	height: auto;
