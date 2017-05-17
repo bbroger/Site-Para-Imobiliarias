@@ -160,11 +160,11 @@ array_rand($imobiliaria_corretores);
               </div>
             </div>
             <ol class="breadcrumb">
-                <li class="active"><?= $imovel->FINALIDADE ?></li>
-                <li class="active"><?= $imovel->TIPO ?></li>
-                <li class="active"><?= $imovel->CIDADE ?></li>
-                <li class="active"><?= $imovel->BAIRRO ?></li>
-                <li class="active"><?= formataDinheiro($imovel->VALOR) ?></li>
+                <li class="active"><b><?= $imovel->FINALIDADE ?></b></li>
+                <li class="active"><b><?= $imovel->TIPO ?></b></li>
+                <li class="active"><b><?= $imovel->CIDADE ?></b></li>
+                <li class="active"><b><?= $imovel->BAIRRO ?></b></li>
+                <li class="active"><b><?= formataDinheiro($imovel->VALOR) ?></b></li>
             </ol>
           </div>
         </div>
