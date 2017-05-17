@@ -190,19 +190,19 @@ $imoveisResultado = recuperaArray($imoveisResultado);
             </div>
             <ol class="breadcrumb">
               <?php if (!empty($_REQUEST['tipo'])) { ?>
-                <li class="active"><b><?= $_REQUEST['tipo'] ?></b></li>
+                <li class="active"><b style="text-shadow: -1px 0 gray, 0 1px gray, 1px 0 black, 0 -1px black;"><?= $_REQUEST['tipo'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['modelo'])) { ?>
-                <li class="active"><b><?= $_REQUEST['modelo'] ?></b></li>
+                <li class="active"><b style="text-shadow: -1px 0 gray, 0 1px gray, 1px 0 black, 0 -1px black;"><?= $_REQUEST['modelo'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['cidade'])) { ?>
-                <li class="active"><b><?= $_REQUEST['cidade'] ?></b></li>
+                <li class="active"><b style="text-shadow: -1px 0 gray, 0 1px gray, 1px 0 black, 0 -1px black;"><?= $_REQUEST['cidade'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['bairro'])) { ?>
-                <li class="active"><b><?= $_REQUEST['bairro'] ?></b></li>
+                <li class="active"><b style="text-shadow: -1px 0 gray, 0 1px gray, 1px 0 black, 0 -1px black;"><?= $_REQUEST['bairro'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['valor'])) { ?>
-                <li class="active"><b><?= $_REQUEST['valor'] ?></b></li>
+                <li class="active"><b style="text-shadow: -1px 0 gray, 0 1px gray, 1px 0 black, 0 -1px black;"><?= $_REQUEST['valor'] ?></b></li>
               <?php } ?>
             </ol>
           </div>
