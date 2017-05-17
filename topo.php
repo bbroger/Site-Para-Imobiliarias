@@ -24,11 +24,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.php">Home</a></li>
+        <li class="active"><a href="index.php"><b>Home</b></a></li>
         <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos">Quem Somos</a></li>
-        <li><a href="busca.php">Imóveis</a></li>
+        <li><a href="busca.php"><b>Imóveis<b></a></li>
         <!-- <li><a href="#modal-servicos" data-toggle="modal" data-target="#modal-servicos">Serviços</a></li> -->
-        <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato">Contato</a></li>
+        <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato"><b>Contato<b/></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
@@ -68,7 +68,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Sign up</h4>
+        <h4 class="modal-title"><b>Sign up</b></h4>
       </div>
       <div class="modal-body">
         <form role="form">
