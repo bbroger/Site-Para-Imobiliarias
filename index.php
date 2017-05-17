@@ -116,7 +116,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                   <!-- break -->
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
-                      <label for="status">Modelos</label>
+                      <label for="status">Tipos</label>
                       <select class="form-control" name='modelo'>
                       <option value="">TODOS</option>
                       <?php foreach($modelos as $modelo){ ?>
