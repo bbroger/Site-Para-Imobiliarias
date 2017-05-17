@@ -27,7 +27,6 @@
         <li class="active"><a href="index.php"><b>Home</b></a></li>
         <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos"><b>Quem Somos</b></a></li>
         <li><a href="busca.php"><b>Imóveis<b></a></li>
-        <!-- <li><a href="#modal-servicos" data-toggle="modal" data-target="#modal-servicos">Serviços</a></li> -->
         <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato"><b>Contato</b></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -61,41 +60,6 @@
   </div>
 </div>
 <!-- end:modal-Quem Somos -->
-
-<!-- begin:modal-servicos -->
-<div class="modal fade" id="modal-servicos" tabindex="-1" role="dialog" aria-labelledby="modal-servicos" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title"><b>Sign up</b></h4>
-      </div>
-      <div class="modal-body">
-        <form role="form">
-          <div class="form-group">
-            <input type="email" class="form-control input-lg" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control input-lg" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control input-lg" placeholder="Confirm Password">
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="agree"> Agree to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>
-            </label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <p>Already have account ? <a href="#modal-signin" data-toggle="modal" data-target="#modal-signin">Sign in here.</a></p>
-        <input type="submit" class="btn btn-danger btn-block btn-lg" value="Sign up">
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end:modal-servicos -->
 
 <!-- begin:modal-contato -->
 <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="modal-contato" aria-hidden="true">
