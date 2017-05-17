@@ -403,7 +403,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
       <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12" align="center">
-              <h1><a href="tel:<?= $imobiliaria_telefone ?>" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><?= $imobiliaria_telefone ?></a></h1>
+              <h1><a href="tel:<?= $imobiliaria_telefone ?>" style="text-shadow: -1px 0 gray, 0 1px gray, 1px 0 black, 0 -1px black;"><?= $imobiliaria_telefone ?></a></h1>
           </div>
         </div>
       </div>
