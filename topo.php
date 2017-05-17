@@ -13,7 +13,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-top">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Menu</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="index.php"><b>Home</b></a></li>
-        <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos">Quem Somos</a></li>
+        <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos"><b>Quem Somos</b></a></li>
         <li><a href="busca.php"><b>Imóveis<b></a></li>
         <!-- <li><a href="#modal-servicos" data-toggle="modal" data-target="#modal-servicos">Serviços</a></li> -->
         <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato"><b>Contato<b/></a></li>
