@@ -28,7 +28,7 @@
         <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos"><b>Quem Somos</b></a></li>
         <li><a href="busca.php"><b>Imóveis<b></a></li>
         <!-- <li><a href="#modal-servicos" data-toggle="modal" data-target="#modal-servicos">Serviços</a></li> -->
-        <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato"><b>Contato<b/></a></li>
+        <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato"><b>Contato</b></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
