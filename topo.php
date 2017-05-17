@@ -26,7 +26,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="index.php"><b>Home</b></a></li>
         <li><a href="#modal-quemsomos" data-toggle="modal" data-target="#modal-quemsomos"><b>Quem Somos</b></a></li>
-        <li><a href="busca.php"><b>Imóveis<b></a></li>
+        <li><a href="busca.php"><b>Imóveis</b></a></li>
         <li><a href="#modal-contato" data-toggle="modal" data-target="#modal-contato"><b>Contato</b></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
