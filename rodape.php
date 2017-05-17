@@ -37,8 +37,8 @@
             <strong>CRECI: <?= $imobiliaria_creci ?></strong><br>
             <a href="https://www.google.com/maps/place/<?= str_replace(" ","+",$imobiliaria_endereco) ?>,+Brasil" target="_blank"><?= $imobiliaria_endereco ?></a><br>
             <br>
-            Tel. : <?= $imobiliaria_telefone ?><br>
-            Email : <?= $imobiliaria_email ?>
+            Tel. : <b><?= $imobiliaria_telefone ?></b><br>
+            Email : <b><?= $imobiliaria_email ?></b>
             </address>
         </div>
         </div>
