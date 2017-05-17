@@ -272,7 +272,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                     
                     <div class="property-features">
                       <span><i class="fa fa-hdd-o"></i> <?= $imovel->DORMITORIOS ?> Dorm.</span>
-                      <span><i class="fa fa-male"></i> <?= $imovel->BANHEIROS ?> Banho.</span>
+                      <span><i class="fa fa-hashtag"></i> Cód. <?= $imovel->COD_IMOVEL ?></span>
                       </div>
                       <div class="property-content">
                         <h4><?= $imovel->TIPO ?></h4>
