@@ -289,7 +289,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <div id="news">
       <div class="container">
         <div class="row">
-          <!-- begin:blog -->
+          <!-- begin:TERRENO DESTAQUE -->
           <div class="col-md-4 col-sm-4">
             <div class="row">
               <div class="col-md-12">
@@ -308,7 +308,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                         <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>">
                           <span><i class="fa fa-home"></i> <?= $imovel->AREA_TERRENO ?> m<sup>2</sup></span><br/>
                           <small><?= $imovel->BAIRRO ?></small><br/>
-                          <small><?= formataDinheiro($imovel->VALOR) ?></small>
+                          <small><b><?= formataDinheiro($imovel->VALOR) ?></b></small>
                         </a>
                         <div class="heading-title">&nbsp;</div>
                       </div>
@@ -320,9 +320,9 @@ $imoveisComercial = recuperaArray($imoveisComercial);
             <!-- break -->
 
           </div>
-          <!-- end:blog -->
+          <!-- end:TERRENO DESTAQUE -->
 
-          <!-- begin:popular -->
+          <!-- begin:COMERCIAL DESTAQUE -->
           <div class="col-md-4 col-sm-4">
             <div class="row">
               <div class="col-md-12">
@@ -343,7 +343,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                           <span><i class="fa fa-home"></i> <?= $imovel->AREA_TERRENO ?> m<sup>2</sup> / </span>
                           <span><i class="fa fa-hdd-o"></i> <?= $imovel->DORMITORIOS ?> Sala</span><br/ >
                           <small><?= $imovel->BAIRRO ?></small><br/>
-                          <small><?= formataDinheiro($imovel->VALOR) ?></small>
+                          <small><b><?= formataDinheiro($imovel->VALOR) ?></b></small>
                         </a>
                           <div class="heading-title">&nbsp;</div>
                       </div>
@@ -355,7 +355,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
             <!-- break -->
 
           </div>
-          <!-- end:popular -->
+          <!-- end:COMERCIAL DESTAQUE -->
 
           <!-- begin:agent -->
           <div class="col-md-4 col-sm-4">
