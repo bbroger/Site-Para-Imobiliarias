@@ -190,19 +190,19 @@ $imoveisResultado = recuperaArray($imoveisResultado);
             </div>
             <ol class="breadcrumb">
               <?php if (!empty($_REQUEST['tipo'])) { ?>
-                <li class="active"><?= $_REQUEST['tipo'] ?></li>
+                <li class="active"><b><?= $_REQUEST['tipo'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['modelo'])) { ?>
-                <li class="active"><?= $_REQUEST['modelo'] ?></li>
+                <li class="active"><b><?= $_REQUEST['modelo'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['cidade'])) { ?>
-                <li class="active"><?= $_REQUEST['cidade'] ?></li>
+                <li class="active"><b><?= $_REQUEST['cidade'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['bairro'])) { ?>
-                <li class="active"><?= $_REQUEST['bairro'] ?></li>
+                <li class="active"><b><?= $_REQUEST['bairro'] ?></b></li>
               <?php } ?>
               <?php if (!empty($_REQUEST['valor'])) { ?>
-                <li class="active"><?= $_REQUEST['valor'] ?></li>
+                <li class="active"><b><?= $_REQUEST['valor'] ?></b></li>
               <?php } ?>
             </ol>
           </div>
