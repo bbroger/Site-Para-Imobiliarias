@@ -333,7 +333,7 @@ array_rand($imobiliaria_corretores);
             <!-- break -->
             <div class="widget widget-sidebar widget-white">
               <div class="widget-header">
-                <h3>Modelos</h3>
+                <h3>Tipos de Imóveis</h3>
               </div>    
               <ul class="list-check">
                 <?php foreach($modelosQtde as $modelo){ ?>
