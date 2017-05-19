@@ -43,14 +43,14 @@ $fotos = $api->get("fotos", ['transform' => '1', 'token' => $token,
                 ]);
 
 $fotos = recuperaArray($fotos);
-
+var_dump($fotos);
 $fotosFachada = $api->get("fotos", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FOTO,cs,_60_', 'COD_IMOVEL,eq,'.$codigo), 
                 'order[]'=>'foto,asc',
                 ]);
 
 $fotosFachada = recuperaArray($fotosFachada);
-
+var_dump($fotosFachada);
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
 ?>
