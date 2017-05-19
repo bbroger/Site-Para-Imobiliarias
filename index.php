@@ -31,12 +31,12 @@ $imoveisAluguel = $api->get("imovel", ['transform' => '1', 'token' => $token,
                 ]);
 $imoveisAluguel = recuperaArray($imoveisAluguel);
 
-$imoveisTerreno = $api->get("imovel", ['transform' => '1', 'token' => $token, 
-                'filter'=> array('TIPO,eq,TERRENO', 'ANUNCIO,eq,SIM'),
+$imoveisResidencia = $api->get("imovel", ['transform' => '1', 'token' => $token, 
+                'filter'=> array('TIPO,eq,CASA', 'ANUNCIO,eq,SIM'),
                 'page'=>'1,4',
                 'order[]'=>'ID_IMOVEL,desc',
                 ]);
-$imoveisTerreno = recuperaArray($imoveisTerreno);
+$imoveisResidencia = recuperaArray($imoveisResidencia);
 
 $imoveisComercial = $api->get("imovel", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('TIPO,eq,COMERCIAL', 'ANUNCIO,eq,SIM'),
@@ -289,12 +289,12 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <div id="news">
       <div class="container">
         <div class="row">
-          <!-- begin:TERRENO DESTAQUE -->
+          <!-- begin:RESIDENCIA DESTAQUE -->
           <div class="col-md-4 col-sm-4">
             <div class="row">
               <div class="col-md-12">
                 <div class="heading-title heading-title-sm bg-white">
-                  <h2>Terrenos Destaque</h2>
+                  <h2>Residências em Destaque</h2>
                 </div>
               </div>
             </div>
@@ -302,7 +302,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 
             <div class="row">
               <div class="col-md-12">
-                     <?php foreach($imoveisTerreno->imovel as $imovel){?>
+                     <?php foreach($imoveisResidencia->imovel as $imovel){?>
                       <div class="post-img" style="background: url(/fotos_imoveis/<?= getFotoFachada($imovel->ID_IMOVEL) ?>);"><h3><?= $imovel->FINALIDADE ?></h3></div>
                       <div class="post-content">
                         <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>">
@@ -320,14 +320,14 @@ $imoveisComercial = recuperaArray($imoveisComercial);
             <!-- break -->
 
           </div>
-          <!-- end:TERRENO DESTAQUE -->
+          <!-- end:RESIDENCIA DESTAQUE -->
 
           <!-- begin:COMERCIAL DESTAQUE -->
           <div class="col-md-4 col-sm-4">
             <div class="row">
               <div class="col-md-12">
                 <div class="heading-title heading-title-sm bg-white">
-                  <h2>Comercial em Destaque</h2>
+                  <h2>Cômodos em Destaque</h2>
                 </div>
               </div>
             </div>
