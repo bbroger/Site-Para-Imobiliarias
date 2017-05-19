@@ -6,6 +6,12 @@ require "configuracao.php";
 require "utilitario.php"; 
 require "restclient.php"; 
 
+if ( empty($_REQUEST['codigo']) ){
+  header("Location: ".$imobiliaria_site);
+  die();
+} else
+  $codigo = $_REQUEST['codigo'];
+
 $api = new RestClient(['base_url' => $api]);
 
 $bairros = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROS']);
@@ -23,11 +29,6 @@ $modelosQtde = recuperaArray($modelosQtde);
 $cidades = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'CIDADES']);
 $cidades = recuperaArray($cidades);
 
-if ( empty($_REQUEST['codigo']) )
-  $codigo = 0;
-else
-  $codigo = $_REQUEST['codigo'];
-
 $imovel = $api->get("imovel", ['transform' => '1', 'token' => $token, 
                 'filter[]'=> 'COD_IMOVEL,eq,'.$codigo,
                 'page'=>'1,1',
@@ -35,6 +36,22 @@ $imovel = $api->get("imovel", ['transform' => '1', 'token' => $token,
 
 $imovel = recuperaArray($imovel);
 $imovel = $imovel->imovel[0];
+
+$imovelFotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
+                'filter'=> array('FOTO,ncs,_60_', 'COD_IMOVEL,eq,'.$codigo), 
+                'order[]'=>'foto,asc',
+                ]);
+
+$imovelFotos = recuperaArray($imovelFotos);
+
+$imovelFotosFachada = $api->get("fotos", ['transform' => '1', 'token' => $token, 
+                'filter'=> array('FOTO,cs,_60_', 'COD_IMOVEL,eq,'.$codigo), 
+                'order[]'=>'foto,asc',
+                ]);
+
+$imovelFotosFachada = recuperaArray($imovelFotosFachada);
+
+$imovelFotos = array_merge($imovelFotos, $imovelFotosFachada);
 
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
@@ -193,14 +210,13 @@ array_rand($imobiliaria_corretores);
                         <h2>IMÓVEL NO BAIRRO <?= $imovel->BAIRRO ?></h2>
                         <div id="slider-property" class="carousel slide" data-ride="carousel">
                           <ol class="carousel-indicators">
-                            <li data-target="#slider-property" data-slide-to="0" class="">
-                              <img src="img/img02.jpg" alt="">
-                            </li>
+                            <?php $num = 0; foreach($imovelFotos as $foto){ $num++; ?>
+                              <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="">
+                                <img src="/fotos_imoveis/<?= strtoupper($foto['FOTO']) ?>" alt="<?= $foto['DESCRICAO'] ?>">
+                              </li>
+                            <?php } ?>
                             <li data-target="#slider-property" data-slide-to="1" class="active">
                               <img src="img/img03.jpg" alt="">
-                            </li>
-                            <li data-target="#slider-property" data-slide-to="2">
-                              <img src="img/img04.jpg" alt="">
                             </li>
                           </ol>
                           <div class="carousel-inner">
