@@ -51,9 +51,7 @@ $imovelFotosFachada = $api->get("fotos", ['transform' => '1', 'token' => $token,
 
 $imovelFotosFachada = recuperaArray($imovelFotosFachada);
 
-$imovelFotos = array_merge($imovelFotos, $imovelFotosFachada);
-
-var_dump($imovelFotos);
+$imovelFotos = array_merge((array)$imovelFotos, (array)$imovelFotosFachada);
 
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
