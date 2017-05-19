@@ -53,6 +53,8 @@ $imovelFotosFachada = recuperaArray($imovelFotosFachada);
 
 $imovelFotos = array_merge($imovelFotos, $imovelFotosFachada);
 
+var_dump($imovelFotos);
+
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
 ?>
