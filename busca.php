@@ -244,6 +244,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                       <option value="">Novos Anúncios</option>
                       <option value="BAIRRO,asc" <?= $_REQUEST['ordem'] == "BAIRRO,asc"? 'selected': ''; ?>>Bairro</option>
                       <option value="ENDERECO,asc" <?= $_REQUEST['ordem'] == "ENDERECO,asc"? 'selected': ''; ?>>Rua</option>
+                      <option value="DORMITORIOS,desc" <?= $_REQUEST['ordem'] == "DORMITORIOS,desc"? 'selected': ''; ?>>Dormitórios</option>
                       <option value="ID_IMOVEL,desc" <?= $_REQUEST['ordem'] == "ID_IMOVEL,desc"? 'selected': ''; ?>>Novidades</option>
                       <option value="VALOR,asc" <?= $_REQUEST['ordem'] == "VALOR,asc"? 'selected': ''; ?>>Valor Menor Primeiro</option>
                       <option value="VALOR,desc" <?= $_REQUEST['ordem'] == "VALOR,desc"? 'selected': ''; ?>>Valor Maior Primeiro</option>
