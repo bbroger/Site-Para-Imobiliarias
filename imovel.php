@@ -210,14 +210,14 @@ array_rand($imobiliaria_corretores);
                           <ol class="carousel-indicators">
                             <?php $num = 0; foreach($fotosFachada as $foto){ $num++; ?>
                               <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="">
-                                <img src="/fotos_imoveis/<?= strtoupper($foto['FOTO']) ?>" alt="<?= $foto['DESCRICAO'] ?>">
+                                <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
                               </li>
                             <?php } ?>
                           </ol>
                           <div class="carousel-inner">
-                            <?php $num = 0; foreach($fotosFachada as $foto){ $num++; ?>
+                            <?php foreach($fotosFachada as $foto){ ?>
                               <div class="item">
-                                <img src="/fotos_imoveis/<?= strtoupper($foto['FOTO']) ?>" alt="<?= $foto['DESCRICAO'] ?>">
+                                <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
                               </div>
                             <?php } ?>
                           </div>
