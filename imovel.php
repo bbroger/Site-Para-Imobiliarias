@@ -37,21 +37,19 @@ $imovel = $api->get("imovel", ['transform' => '1', 'token' => $token,
 $imovel = recuperaArray($imovel);
 $imovel = $imovel->imovel[0];
 
-$imovelFotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
+$fotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FOTO,ncs,_60_', 'COD_IMOVEL,eq,'.$codigo), 
                 'order[]'=>'foto,asc',
                 ]);
 
-$imovelFotos = recuperaArray($imovelFotos);
+$fotos = recuperaArray($fotos);
 
-$imovelFotosFachada = $api->get("fotos", ['transform' => '1', 'token' => $token, 
+$fotosFachada = $api->get("fotos", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FOTO,cs,_60_', 'COD_IMOVEL,eq,'.$codigo), 
                 'order[]'=>'foto,asc',
                 ]);
 
-$imovelFotosFachada = recuperaArray($imovelFotosFachada);
-
-$imovelFotos = array_merge((array)$imovelFotos, (array)$imovelFotosFachada);
+$fotosFachada = recuperaArray($fotosFachada);
 
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
@@ -210,25 +208,18 @@ array_rand($imobiliaria_corretores);
                         <h2>IMÓVEL NO BAIRRO <?= $imovel->BAIRRO ?></h2>
                         <div id="slider-property" class="carousel slide" data-ride="carousel">
                           <ol class="carousel-indicators">
-                            <?php $num = 0; foreach($imovelFotos as $foto){ $num++; ?>
+                            <?php $num = 0; foreach($fotosFachada as $foto){ $num++; ?>
                               <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="">
                                 <img src="/fotos_imoveis/<?= strtoupper($foto['FOTO']) ?>" alt="<?= $foto['DESCRICAO'] ?>">
                               </li>
                             <?php } ?>
-                            <li data-target="#slider-property" data-slide-to="1" class="active">
-                              <img src="img/img03.jpg" alt="">
-                            </li>
                           </ol>
                           <div class="carousel-inner">
-                            <div class="item">
-                              <img src="img/img02.jpg" alt="">
-                            </div>
-                            <div class="item active">
-                              <img src="img/img03.jpg" alt="">
-                            </div>
-                            <div class="item">
-                              <img src="img/img04.jpg" alt="">
-                            </div>
+                            <?php $num = 0; foreach($fotosFachada as $foto){ $num++; ?>
+                              <div class="item">
+                                <img src="/fotos_imoveis/<?= strtoupper($foto['FOTO']) ?>" alt="<?= $foto['DESCRICAO'] ?>">
+                              </div>
+                            <?php } ?>
                           </div>
                           <a class="left carousel-control" href="#slider-property" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
