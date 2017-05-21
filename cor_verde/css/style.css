@@ -1750,8 +1750,8 @@ input[type="color"]:focus,
 
 #slider-property .carousel-indicators li{
 	position: relative;
-	width: 100px;
-	height: 65px;
+	width: 30px; /* width: 100px; */
+	height: 19.5px; /* height: 65px; */
 	margin: 0;
 	-webkit-border-radius: 2px;
 	   -moz-border-radius: 2px;
