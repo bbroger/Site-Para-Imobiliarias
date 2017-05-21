@@ -209,14 +209,26 @@ array_rand($imobiliaria_corretores);
                         <div id="slider-property" class="carousel slide" data-ride="carousel">
                           <ol class="carousel-indicators">
                             <?php $num = 0; foreach($fotosFachada->fotos as $foto){ ?>
-                              <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="active">
+                              <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="<?= $num == 0? 'active': '';?>">
                                 <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
                               </li>
-                            <?php $num++; } ?>
+                            <?php $num++; } 
+                            
+                            foreach($fotos->fotos as $foto){ ?>
+                              <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="">
+                                <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
+                              </li>
+                            <?php } ?>
                           </ol>
                           <div class="carousel-inner">
-                            <?php foreach($fotosFachada->fotos as $foto){ ?>
-                              <div class="item active">
+                            <?php $num = 0; foreach($fotosFachada->fotos as $foto){ ?>
+                              <div class="item <?= $num == 0? 'active': '';?>">
+                                <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
+                              </div>
+                            <?php $num++; }
+                             
+                             foreach($fotos->fotos as $foto){ ?>
+                              <div class="item">
                                 <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
                               </div>
                             <?php } ?>
