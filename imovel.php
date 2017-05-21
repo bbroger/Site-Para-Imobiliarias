@@ -386,23 +386,11 @@ array_rand($imobiliaria_corretores);
 <script>
       /* map property */
     $('a[href="#location"]').on('shown.bs.tab', function(){
-        $("#map-property").gmap3(  
-            map: {
-                options: {
-                  zoom: 13
-                }  
-             },
-            marker:{
-                address: "Arnaldo Teixeira Lemos 859, Franca, SP",
-                options: {
-                 icon: new google.maps.MarkerImage(
-                   "https://lh4.ggpht.com/Tr5sntMif9qOPrKV_UVl7K8A_V3xQDgA7Sw_qweLUFlg76d_vGFA7q1xIKZ6IcmeGqg=w300",
-                   new google.maps.Size(48, 48, "px", "px")
-                 )
-                }
-             }
-        
-        );
+        $("#map-property").gmap3({
+          address: "Jardim Lima, Franca, SP",
+          zoom: 13,
+          mapTypeId : google.maps.MapTypeId.ROADMAP
+        });
     })
 </script>
 
