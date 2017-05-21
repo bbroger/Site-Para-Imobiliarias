@@ -388,7 +388,7 @@ array_rand($imobiliaria_corretores);
     $('a[href="#location"]').on('shown.bs.tab', function(){
         $("#map-property").gmap3({
           address: "Jardim Lima, Franca, SP",
-          zoom: 15,
+          zoom: 14,
           mapTypeId : google.maps.MapTypeId.ROADMAP
         });
     })
