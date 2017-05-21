@@ -216,7 +216,7 @@ array_rand($imobiliaria_corretores);
                           </ol>
                           <div class="carousel-inner">
                             <?php foreach($fotosFachada->fotos as $foto){ ?>
-                              <div class="item">
+                              <div class="item active">
                                 <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
                               </div>
                             <?php } ?>
