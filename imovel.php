@@ -20,8 +20,8 @@ $bairros = recuperaArray($bairros);
 $bairrosQtde = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROSQTDE']);
 $bairrosQtde = recuperaArray($bairrosQtde);
 
-$modelos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
-$modelos = recuperaArray($modelos);
+$tipos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
+$tipos = recuperaArray($tipos);
 
 $modelosQtde = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOSQTDE']);
 $modelosQtde = recuperaArray($modelosQtde);
@@ -106,10 +106,10 @@ array_rand($imobiliaria_corretores);
                 <form role="form" action="busca.php" method="GET">
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                        <label for="country">Tipos</label>
-                        <select class="form-control" name="tipo">
-                        <?php foreach($imovel_tipos as $tipo){ ?>
-                          <option value="<?= $tipo ?>" <?= $tipo == $imovel->FINALIDADE? 'selected': '' ?>><?= $tipo ?></option>
+                        <label for="desejo">Desejo</label>
+                        <select class="form-control" name="desejo">
+                        <?php foreach($imovel_desejos as $valor=>$nome){ ?>
+                          <option value="<?= $valor ?>" <?= $valor == $imovel->FINALIDADE? 'selected': '' ?>><?= $nome ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -126,23 +126,23 @@ array_rand($imobiliaria_corretores);
                   <!-- break -->
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                      <label for="status">Tipos de Imóveis</label>
-                        <select class="form-control" name='modelo'>
+                      <label for="tipo">Tipos</label>
+                        <select class="form-control" name='tipo'>
                         <option value="">TODOS</option>
-                        <?php foreach($modelos as $modelo){ ?>
-                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $imovel->TIPO? 'selected': '' ?>><?= $modelo->NOME ?></option>
+                        <?php foreach($tipos as $tipo){ ?>
+                          <option value="<?= $tipo->NOME ?>" <?= $tipo->NOME == $imovel->TIPO? 'selected': '' ?>><?= $tipo->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>
                     <div class="form-group">
-                      <label for="maxprice">Código</label>
+                      <label for="codigo">Código</label>
                       <input type="number" name="codigo" value="" class="form-control" placeholder="0000">
                     </div>
                   </div>
                   <!-- break -->
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                        <label for="location">Cidades</label>
+                        <label for="cidade">Cidades</label>
                           <select class="form-control" name='cidade'>
                           <option value="">TODAS</option>
                           <?php foreach($cidades as $cidade){ ?>
@@ -209,7 +209,7 @@ array_rand($imobiliaria_corretores);
                         <div id="slider-property" class="carousel slide" data-ride="carousel">
                           <ol class="carousel-indicators">
                             <?php $num = 0; foreach($fotosFachada->fotos as $foto){ ?>
-                              <li data-target="#slider-property" data-slide-to="<?= $num ?>">
+                              <li data-target="#slider-property" data-slide-to="<?= $num ?>" class="active">
                                 <img src="/fotos_imoveis/<?= strtoupper($foto->FOTO) ?>" alt="<?= $foto->DESCRICAO ?>">
                               </li>
                             <?php $num++; } ?>

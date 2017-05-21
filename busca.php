@@ -15,8 +15,8 @@ $bairros = recuperaArray($bairros);
 $bairrosQtde = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROSQTDE']);
 $bairrosQtde = recuperaArray($bairrosQtde);
 
-$modelos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
-$modelos = recuperaArray($modelos);
+$tipos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
+$tipos = recuperaArray($tipos);
 
 $modelosQtde = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOSQTDE']);
 $modelosQtde = recuperaArray($modelosQtde);
@@ -34,11 +34,11 @@ $filter = array('ANUNCIO,eq,SIM');
   if (!empty($_REQUEST['codigo']))
     array_push($filter, 'COD_IMOVEL,eq,'.$_REQUEST['codigo']);
 
-  if (!empty($_REQUEST['tipo']))
-    array_push($filter, 'FINALIDADE,eq,'.$_REQUEST['tipo']);
+  if (!empty($_REQUEST['desejo']))
+    array_push($filter, 'FINALIDADE,eq,'.$_REQUEST['desejo']);
 
-  if (!empty($_REQUEST['modelo']))
-    array_push($filter, 'TIPO,eq,'.$_REQUEST['modelo']);
+  if (!empty($_REQUEST['tipo']))
+    array_push($filter, 'TIPO,eq,'.$_REQUEST['tipo']);
 
   if (!empty($_REQUEST['cidade']))
     array_push($filter, 'CIDADE,eq,'.$_REQUEST['cidade']);
@@ -120,10 +120,10 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                 <form role="form" action="busca.php" method="GET">
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                        <label for="country">Tipos</label>
-                        <select class="form-control" name="tipo">
-                        <?php foreach($imovel_tipos as $tipo){ ?>
-                          <option value="<?= $tipo ?>" <?= $tipo == $_REQUEST['tipo']? 'selected': '' ?>><?= $tipo ?></option>
+                        <label for="desejo">Desejo</label>
+                        <select class="form-control" name="desejo">
+                        <?php foreach($imovel_desejos as $valor=>$nome){?>
+                          <option value="<?= $valor ?>" <?= $valor == $_REQUEST['desejo']? 'selected': '' ?>><?= $nome ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -140,23 +140,23 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                   <!-- break -->
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                      <label for="status">Tipos de Imóveis</label>
-                        <select class="form-control" name='modelo'>
+                      <label for="tipo">Tipos</label>
+                        <select class="form-control" name='tipo'>
                         <option value="">TODOS</option>
-                        <?php foreach($modelos as $modelo){ ?>
-                          <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $_REQUEST['modelo']? 'selected': '' ?>><?= $modelo->NOME ?></option>
+                        <?php foreach($tipos as $tipo){ ?>
+                          <option value="<?= $tipo->NOME ?>" <?= $tipo->NOME == $_REQUEST['tipo']? 'selected': '' ?>><?= $tipo->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>
                     <div class="form-group">
-                      <label for="maxprice">Código</label>
+                      <label for="codigo">Código</label>
                       <input type="number" name="codigo" value="<?= empty($_REQUEST['codigo'])? '': $_REQUEST['codigo'] ?>" class="form-control" placeholder="0000">
                     </div>
                   </div>
                   <!-- break -->
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                        <label for="location">Cidades</label>
+                        <label for="cidade">Cidades</label>
                           <select class="form-control" name='cidade'>
                           <option value="">TODAS</option>
                           <?php foreach($cidades as $cidade){ ?>
@@ -171,7 +171,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                   <!-- break -->
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
-                        <label for="location">Bairros</label>
+                        <label for="bairro">Bairros</label>
                         <select class="form-control" name='bairro'>
                         <option value="">TODOS</option>
                         <?php foreach($bairros as $bairro){ ?>

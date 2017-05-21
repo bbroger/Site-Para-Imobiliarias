@@ -11,8 +11,8 @@ $api = new RestClient(['base_url' => $api]);
 $bairros = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROS']);
 $bairros = recuperaArray($bairros);
 
-$modelos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
-$modelos = recuperaArray($modelos);
+$tipos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
+$tipos = recuperaArray($tipos);
 
 $cidades = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'CIDADES']);
 $cidades = recuperaArray($cidades);
@@ -96,15 +96,15 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                 <form role="form" action="busca.php" method="GET">
                   <div class="col-md-6 col-sm-6 col-xs-6">
                       <div class="form-group">
-                        <label for="country">Tipos</label>
-                        <select class="form-control" name="tipo">
-                        <?php foreach($imovel_tipos as $tipo){ ?>
-                          <option value="<?= $tipo ?>" <?= $tipo == $_REQUEST['tipo']? 'selected': '' ?>><?= $tipo ?></option>
+                        <label for="desejo">Desejo</label>
+                        <select class="form-control" name="desejo">
+                        <?php foreach($imovel_desejos as $valor=>$nome){ ?>
+                          <option value="<?= $valor ?>" <?= $valor == $_REQUEST['desejo']? 'selected': '' ?>><?= $nome ?></option>
                         <?php } ?>
                         </select>
                       </div>
                       <div class="form-group">
-                          <label for="location">Cidades</label>
+                          <label for="cidade">Cidades</label>
                           <select class="form-control" name='cidade'>
                           <option value="">TODAS</option>
                           <?php foreach($cidades as $cidade){ ?>
@@ -116,16 +116,16 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                   <!-- break -->
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
-                      <label for="status">Tipos</label>
-                      <select class="form-control" name='modelo'>
+                      <label for="tipo">Tipos</label>
+                      <select class="form-control" name='tipo'>
                       <option value="">TODOS</option>
-                      <?php foreach($modelos as $modelo){ ?>
-                        <option value="<?= $modelo->NOME ?>" <?= $modelo->NOME == $_REQUEST['modelo']? 'selected': '' ?>><?= $modelo->NOME ?></option>
+                      <?php foreach($tipos as $tipo){ ?>
+                        <option value="<?= $tipo->NOME ?>" <?= $tipo->NOME == $_REQUEST['tipo']? 'selected': '' ?>><?= $tipo->NOME ?></option>
                       <?php } ?>
                       </select>
                     </div>
                     <div class="form-group">
-                        <label for="location">Bairros</label>
+                        <label for="bairro">Bairros</label>
                         <select class="form-control" name='bairro'>
                         <option value="">TODOS</option>
                         <?php foreach($bairros as $bairro){ ?>
@@ -149,7 +149,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
-                      <label for="maxprice">Código</label>
+                      <label for="codigo">Código</label>
                       <input type="number" name="codigo" value="<?= empty($_REQUEST['codigo'])? '': $_REQUEST['codigo'] ?>" class="form-control" placeholder="0000">
                     </div>
                   </div>
