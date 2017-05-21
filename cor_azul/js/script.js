@@ -170,26 +170,4 @@ $(document).ready(function(){
         keyboard: true
     })
 
-
-    /* map property */
-    $('a[href="#location"]').on('shown.bs.tab', function(){
-        $("#map-property").gmap3({
-            map: {
-                options: {
-                  center: [-7.866315,110.389574],
-                  zoom: 13,
-                  scrollwheel: false
-                }  
-             },
-            marker:{
-                latLng: [-7.866315,110.389574],
-                options: {
-                 icon: new google.maps.MarkerImage(
-                   "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
-                   new google.maps.Size(48, 48, "px", "px")
-                 )
-                }
-             }
-        });
-    })
 });

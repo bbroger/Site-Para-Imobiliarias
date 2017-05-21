@@ -382,5 +382,17 @@ array_rand($imobiliaria_corretores);
     <!-- end:content -->
 
 <?php include 'rodape.php'; ?>
+
+<script>
+      /* map property */
+    $('a[href="#location"]').on('shown.bs.tab', function(){
+        $("#map-property").gmap3({
+          address: "Arnaldo Teixeira Lemos 859, Franca, SP",
+          zoom: 6,
+          mapTypeId : google.maps.MapTypeId.ROADMAP
+        });
+    })
+</script>
+
   </body>
 </html>
