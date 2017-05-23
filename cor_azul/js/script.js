@@ -10,7 +10,7 @@ $(document).ready(function(){
 	}
 
 
-    /* backstretch slider */
+    /* backstretch slider
     $('.header-slide').backstretch([
       "slide/bg01.jpg",
       "slide/bg02.jpg",
@@ -19,6 +19,7 @@ $(document).ready(function(){
         fade: 850,
         duration: 4000
     });
+    */
 
 
     /* navbar */
