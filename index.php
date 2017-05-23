@@ -63,7 +63,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
-
+    <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>" />
     <title><?= $imobiliaria_title ?></title>
 
     <!-- Bootstrap core CSS -->
