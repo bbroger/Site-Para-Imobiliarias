@@ -387,12 +387,12 @@ array_rand($imobiliaria_corretores);
       /* map property */
     $('a[href="#location"]').on('shown.bs.tab', function(){
         $("#map-property").gmap3({
-        address: "<?= $imovel->ENDERECO .', '. $imovel->BAIRRO .', '. $imovel->CIDADE .', BRASIL'  ?>",
+        address: "<?= $imovel->BAIRRO .', '. $imovel->CIDADE .', BRASIL'  ?>",
         zoom: 13,
         mapTypeId : google.maps.MapTypeId.ROADMAP
       })
       .circle({
-        address: "<?= $imovel->ENDERECO .', '. $imovel->BAIRRO .', '. $imovel->CIDADE .', BRASIL'  ?>",
+        address: "<?= $imovel->BAIRRO .', '. $imovel->CIDADE .', BRASIL'  ?>",
         radius : 300,
         fillColor : "#FFAF9F",
         strokeColor : "#FF512F"
