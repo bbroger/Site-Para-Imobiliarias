@@ -111,7 +111,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
 <?php include 'topo.php'; ?>
 
     <!-- begin:header -->
-    <div id="header" class="heading" style="background-image: url(img/img01.jpg);">
+    <div id="header" class="heading" style="background-image: url(<?= $imobiliaria_img_busca ?>);">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 col-sm-12">
