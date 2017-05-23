@@ -71,6 +71,7 @@ array_rand($imobiliaria_corretores);
     <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
+    <meta name="robots" content="index,follow">
     <title>Imóvel, <?= $imovel->BAIRRO.', '. $imovel->ID_IMOVEL .', '. (in_array("ENDERECO", $imobiliaria_retirar)? '': $imovel->ENDERECO) ?></title>
 
     <!-- Bootstrap core CSS -->

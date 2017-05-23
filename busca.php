@@ -87,7 +87,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
     <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
-
+    <meta name="robots" content="index,follow">
     <title>Busca de Imóveis - <?= $imobiliaria_title ?></title>
 
     <!-- Bootstrap core CSS -->
