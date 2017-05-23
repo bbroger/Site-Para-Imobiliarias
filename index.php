@@ -246,7 +246,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
         </div>
         <!-- end:for-sale -->
 
-        <!-- begin:for-rent -->
+        <!-- begin:Youtube -->
         <div class="row">
           <div class="col-md-12">
             <div class="heading-title">
@@ -256,16 +256,16 @@ $imoveisComercial = recuperaArray($imoveisComercial);
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <iframe width="100%" height="273" src="https://www.youtube.com/embed/PW3Dbg8av3I?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="273" src="<?= $imobiliaria_youtube_videos[0] ?>" frameborder="0" allowfullscreen></iframe>
           </div>
           <!-- break -->
 
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <iframe width="100%" height="273" src="https://www.youtube.com/embed/y8z5nTxj0gc?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="273" src="<?= $imobiliaria_youtube_videos[1] ?>" frameborder="0" allowfullscreen></iframe>
           </div>
           <!-- break -->
         </div>
-        <!-- end:for-rent -->
+        <!-- end:Youtube -->
       </div>
     </div>
     <!-- end:content -->

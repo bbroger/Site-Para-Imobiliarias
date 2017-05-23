@@ -96,8 +96,9 @@
     ga('send', 'pageview');
 
     $('.header-slide').backstretch([
-    <?php
-
+    <?php foreach($imobiliaria_slide as $slide){ ?>
+        '<?= $slide ?>',
+    <?php } ?>
     ], {
         fade: 850,
         duration: 4000
