@@ -1,6 +1,9 @@
 # Local configuration files
 configuracao.php
 
+# Other files
+*.html
+
 # Apache files
 error_log
 .htaccess
