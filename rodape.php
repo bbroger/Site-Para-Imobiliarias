@@ -22,10 +22,9 @@
         <div class="widget">
             <h3>Documentos</h3>
             <ul class="list-unstyled">
-            <li><a href="#">Para Locação</a></li>
-            <li><a href="#">Para Vendas</a></li>
-            <li><a href="#">Fiadores</a></li>
-            <li><a href="#">Outros</a></li>
+            <?php foreach($imobiliaria_documentos as $documento){ ?>
+                <li><a href="<?= $documento['DOCUMENTO'] ?>" target="_blank"><?= $documento['NOME'] ?></a></li>
+            <?php } ?>
             </ul>
         </div>
         </div>
