@@ -92,13 +92,12 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', <?= $imobiliaria_google ?>, 'auto');
+    ga('create', '<?= $imobiliaria_google ?>', 'auto');
     ga('send', 'pageview');
 
     $('.header-slide').backstretch([
-        "slide/bg01.jpg",
-        "slide/bg02.jpg",
-        "slide/bg03.jpg"
+    <?php
+
     ], {
         fade: 850,
         duration: 4000
