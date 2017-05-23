@@ -293,7 +293,7 @@ array_rand($imobiliaria_corretores);
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-5 col-sm-5">
+                      <div class="col-md-6 col-sm-6">
                         <div class="team-container team-dark">
                           <div class="team-image">
                             <img src="img/<?= $imobiliaria_corretores[0]['FOTO'] ?>" alt="Corretor(a) <?= $imobiliaria_corretores[0]['NOME'] ?>">
@@ -313,7 +313,7 @@ array_rand($imobiliaria_corretores);
                         </div>
                       </div>
 
-                      <div class="col-md-7 col-sm-7">
+                      <div class="col-md-6 col-sm-6">
                         <form action="POST">
                           <div class="form-group">
                             <label for="name">Nome Completo</label>
