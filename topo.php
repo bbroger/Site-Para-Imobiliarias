@@ -93,7 +93,7 @@
             <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu telefone COM DDD..." required="true">
           </div>
           <div class="form-group">
-            <textarea name="texto" pattern=".{20,}" placeholder="Sua mensagem (MÍNIMO DE 20 CARACTERES)..." class="form-control input-lg" rows="3" required="true"></textarea>
+            <textarea name="texto" minlength="20" placeholder="Sua mensagem (MÍNIMO DE 20 CARACTERES)..." class="form-control input-lg" rows="3" required="true"></textarea>
           </div>
       </div>
       <div class="modal-footer">
