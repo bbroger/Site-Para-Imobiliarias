@@ -274,7 +274,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <div id="testimony" style="background-image: url(img/img17.jpg);">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2" styles="position:absolute">
+          <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
             <h2 style="color:white;">Muitas novidades também no Facebook!</h2> <br/>
             <div class="fb-like" data-href="<?= $imobiliaria_facebook ?>" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
             <br/><br/>
