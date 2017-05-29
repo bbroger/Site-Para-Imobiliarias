@@ -49,22 +49,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="description" content="<?= $imobiliaria_descricao ?>">
-    <meta name="keywords" content="<?= $imobiliaria_chaves ?>" />
-    <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="<?= $imobiliaria_title ?>" />
-    <meta property="og:description" content="<?= $imobiliaria_descricao ?>" />
-    <meta property="og:image" content="<?= $imobiliaria_logo_facebook ?>" />
-    <meta property="fb:app_id" content="1496712770565168"/>
-    <!-- <meta name="author" content="Celula Digital Software"> -->
-    <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
-    <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>"/>
-    <meta name="robots" content="index,follow">
+
     <title><?= $imobiliaria_title ?></title>
 
     <!-- Bootstrap core CSS -->
