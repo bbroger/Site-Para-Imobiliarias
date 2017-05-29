@@ -12,6 +12,8 @@
         trataString($_POST['texto']).'<br>LINK: '.$_POST['link'], 
         trataString('edsonlb@gmail.com'), 
         trataString($imobiliaria_email));
+
+    header('Location: '.$_POST['link']);
 /*
     enviaEmail(
         trataString($_POST['email']), 
