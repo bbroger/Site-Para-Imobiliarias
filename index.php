@@ -49,7 +49,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>">
+    <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -63,7 +63,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <meta property="fb:app_id" content="1496712770565168"/>
     <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
-    <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
+    <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>"/>
     <meta name="robots" content="index,follow">
     <title><?= $imobiliaria_title ?></title>
 
