@@ -84,16 +84,16 @@
           </div>
 
           <div class="form-group">
-            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome..." required="true">
+            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome COMPLETO..." required="true">
           </div>
           <div class="form-group">
             <input type="email" name="email" pattern=".{10,}" class="form-control input-lg" placeholder="Seu email..." required="true">
           </div>
           <div class="form-group">
-            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu telefone..." required="true">
+            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu telefone COM DDD..." required="true">
           </div>
           <div class="form-group">
-            <textarea name="texto" pattern=".{20,}" placeholder="Sua mensagem..." class="form-control input-lg" rows="3" required="true"></textarea>
+            <textarea name="texto" pattern=".{20,}" placeholder="Sua mensagem (MÍNIMO DE 20 CARACTERES)..." class="form-control input-lg" rows="3" required="true"></textarea>
           </div>
       </div>
       <div class="modal-footer">
