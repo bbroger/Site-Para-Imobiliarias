@@ -90,7 +90,7 @@
             <input type="email" name="email" class="form-control input-lg" placeholder="Seu email..." required="true">
           </div>
           <div class="form-group">
-            <input type="tel" name="telefone" class="form-control input-lg" placeholder="Seu telefone..." required="true">
+            <input type="tel" name="telefone" min="8" max="13" class="form-control input-lg" placeholder="Seu telefone..." required="true">
           </div>
           <div class="form-group">
             <textarea name="texto" placeholder="Sua mensagem..." class="form-control input-lg" rows="3" required="true"></textarea>
