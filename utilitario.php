@@ -46,7 +46,7 @@
     }
 
     function trataString($string = ""){
-        return trim(addslashes(strip_tags($string)));;
+        return trim(addslashes(strip_tags($string)));
     }
 
 ?>
