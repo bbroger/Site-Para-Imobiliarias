@@ -63,7 +63,8 @@
 
 <!-- begin:modal-contato -->
 <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="modal-contato" aria-hidden="true">
-  <form role="form" action="contato.php" method="POST">
+<form role="form" action="contato.php" method="POST">
+  <input type="hidden" name="link" value="<?= 'http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]' ?>">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -72,15 +73,13 @@
       </div>
       <div class="modal-body">
           <div class="form-group">
-            <select class="form-control" name='departamento' required="true">
+            <select class="form-control" name='para' required="true">
               <option value="">DEPARTAMENTO</option>
               <?php foreach($imobiliaria_departamentos as $imobiliaria_departamento){ ?>
                 <option value="<?= $imobiliaria_departamento['EMAIL'] ?>"><?= $imobiliaria_departamento['NOME'] ?></option>
               <?php } ?>
             </select>
           </div>
-
-
 
           <div class="form-group">
             <input type="text" name="nome" class="form-control input-lg" placeholder="Seu nome..." required="true">
