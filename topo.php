@@ -75,7 +75,7 @@
       </div>
       <div class="modal-body">
           <div class="form-group">
-            <select class="form-control" name='para' required="true">
+            <select class="form-control" name='para' required>
               <option value="">DEPARTAMENTO</option>
               <?php foreach($imobiliaria_departamentos as $imobiliaria_departamento){ ?>
                 <option value="<?= $imobiliaria_departamento['EMAIL'] ?>"><?= $imobiliaria_departamento['NOME'] ?></option>
@@ -84,16 +84,16 @@
           </div>
 
           <div class="form-group">
-            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome COMPLETO..." required="true">
+            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome COMPLETO..." required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" pattern=".{10,}" class="form-control input-lg" placeholder="Seu email..." required="true">
+            <input type="email" name="email" pattern=".{10,}" class="form-control input-lg" placeholder="Seu email..." required>
           </div>
           <div class="form-group">
-            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu telefone COM DDD..." required="true">
+            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu telefone COM DDD..." required>
           </div>
           <div class="form-group">
-            <textarea name="texto" minlength="20" placeholder="Sua mensagem (MÍNIMO DE 20 CARACTERES)..." class="form-control input-lg" rows="3" required="true"></textarea>
+            <textarea name="texto" minlength="20" placeholder="Sua mensagem (MÍNIMO DE 20 CARACTERES)..." class="form-control input-lg" rows="3" required></textarea>
           </div>
       </div>
       <div class="modal-footer">

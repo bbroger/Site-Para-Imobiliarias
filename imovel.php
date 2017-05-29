@@ -319,19 +319,19 @@ array_rand($imobiliaria_corretores);
                           <input type="hidden" name="para" value="<?= $imobiliaria_corretores[0]['EMAIL'] ?>">
                           <div class="form-group">
                             <label for="nome">Nome Completo</label>
-                            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome" required="true">
+                            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome" required>
                           </div>
                           <div class="form-group">
                             <label for="email">E-Mail</label>
-                            <input type="email" name="email" pattern=".{10,}" class="form-control input-lg" placeholder="Seu email" required="true">
+                            <input type="email" name="email" pattern=".{10,}" class="form-control input-lg" placeholder="Seu email" required>
                           </div>
                           <div class="form-group">
                             <label for="telefone">Telefone</label>
-                            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu DDD e telefone" required="true">
+                            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu DDD e telefone" required>
                           </div>
                           <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea name="texto" minlength="20" class="form-control input-lg" rows="7" placeholder="Mensagem..." required="true"></textarea>
+                            <textarea name="texto" minlength="20" class="form-control input-lg" rows="7" placeholder="Mensagem..." required></textarea>
                           </div>
                           <div class="form-group">
                             <input type="submit" name="submit" value="Enviar Mensagem" class="btn btn-danger btn-lg">
