@@ -49,7 +49,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>" />
+    <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
