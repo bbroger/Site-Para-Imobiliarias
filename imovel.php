@@ -316,6 +316,7 @@ array_rand($imobiliaria_corretores);
                       <div class="col-md-6 col-sm-6">
                         <form role="form" action="contato.php" method="POST">
                           <input type="hidden" name="link" value="<?= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
+                          <input type="hidden" name="para" value="<?= $imobiliaria_corretores[0]['EMAIL'] ?>">
                           <div class="form-group">
                             <label for="nome">Nome Completo</label>
                             <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome" required="true">
