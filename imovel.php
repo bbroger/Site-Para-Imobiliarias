@@ -314,22 +314,23 @@ array_rand($imobiliaria_corretores);
                       </div>
 
                       <div class="col-md-6 col-sm-6">
-                        <form action="POST">
+                        <form role="form" action="contato.php" method="POST">
+                          <input type="hidden" name="link" value="<?= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
                           <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" class="form-control input-lg" placeholder="Seu nome">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" name="nome" pattern=".{10,}" class="form-control input-lg" placeholder="Seu nome" required="true">
                           </div>
                           <div class="form-group">
                             <label for="email">E-Mail</label>
-                            <input type="email" class="form-control input-lg" placeholder="Seu email">
+                            <input type="email" name="email" pattern=".{10,}" class="form-control input-lg" placeholder="Seu email" required="true">
                           </div>
                           <div class="form-group">
-                            <label for="telp">Telefone</label>
-                            <input type="text" class="form-control input-lg" placeholder="Seu DDD e telefone">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" name="telefone" pattern=".{8,13}" class="form-control input-lg" placeholder="Seu DDD e telefone" required="true">
                           </div>
                           <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea class="form-control input-lg" rows="7" placeholder="Mensagem..."></textarea>
+                            <textarea name="texto" minlength="20" class="form-control input-lg" rows="7" placeholder="Mensagem..." required="true"></textarea>
                           </div>
                           <div class="form-group">
                             <input type="submit" name="submit" value="Enviar Mensagem" class="btn btn-danger btn-lg">
