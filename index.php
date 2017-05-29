@@ -156,7 +156,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                   </div>
 
 
-                  </div>
+                  
                   <div class="col-md-12 col-sm-12"><input type="submit" value="Buscar" class="btn btn-danger btn-lg btn-block"></div>
 
                 </form>
