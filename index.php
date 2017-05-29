@@ -270,7 +270,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     </div>
     <!-- end:content -->
 
-    <!-- begin:testimony -->
+    <!-- begin:facebook -->
     <div id="testimony" style="background-image: url(img/img17.jpg);">
       <div class="container">
         <div class="row">
@@ -284,7 +284,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
         </div>
       </div>
     </div>
-    <!-- end:testimony -->
+    <!-- end:facebook -->
 
     <!-- begin:news -->
     <div id="news">
