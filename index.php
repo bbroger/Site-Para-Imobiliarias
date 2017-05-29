@@ -52,7 +52,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<?= $imobiliaria_descricao ?>">
     <meta name="keywords" content="<?= $imobiliaria_chaves ?>" />
     <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
@@ -342,7 +342,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                       <div class="post-content">
                         <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>">
                           <span><i class="fa fa-home"></i> <?= $imovel->AREA_TERRENO ?> m<sup>2</sup> / </span>
-                          <span><i class="fa fa-hdd-o"></i> <?= $imovel->DORMITORIOS ?> Sala</span><br/ >
+                          <span><i class="fa fa-hdd-o"></i> <?= $imovel->DORMITORIOS ?> Sala</span><br/>
                           <small><?= $imovel->BAIRRO ?></small><br/>
                           <small><b><?= formataDinheiro($imovel->VALOR) ?></b></small>
                         </a>
