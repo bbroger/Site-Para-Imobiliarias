@@ -9,7 +9,9 @@
     enviaEmail(
         trataString($_POST['email']), 
         trataString('CONTATO DE CLIENTE'), 
-        '<b>EMAIL DO SITE. FAVOR RESPONDER AO CLIENTE. VERIFIQUE O ENDEREÇO DE EMAIL</b><br>LINK: '.$_POST['link'].'<br/><br/>'.trataString($_POST['texto']), 
+        '<b>EMAIL DO SITE. FAVOR RESPONDER AO CLIENTE. VERIFIQUE O ENDEREÇO DE EMAIL</b><br>
+        LINK: '.$_POST['link'].'<br/><br/>CLIENTE: '.trataString($_POST['nome']).'<br/><br/>
+        TELEFONE: '.trataString($_POST['telefone']).'<br/><br/>MENSAGEM: '.trataString($_POST['texto']), 
         trataString('edsonlb@gmail.com'), 
         trataString($imobiliaria_email));
 
