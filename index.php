@@ -52,7 +52,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="<?= $imobiliaria_descricao ?>">
     <meta name="keywords" content="<?= $imobiliaria_chaves ?>" />
     <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
