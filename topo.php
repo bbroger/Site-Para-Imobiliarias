@@ -84,16 +84,16 @@
           </div>
 
           <div class="form-group">
-            <input type="text" name="nome" class="form-control input-lg" placeholder="Seu nome..." required="true">
+            <input type="text" name="nome" min="10" class="form-control input-lg" placeholder="Seu nome..." required="true">
           </div>
           <div class="form-group">
-            <input type="email" name="email" class="form-control input-lg" placeholder="Seu email..." required="true">
+            <input type="email" name="email" min="10" class="form-control input-lg" placeholder="Seu email..." required="true">
           </div>
           <div class="form-group">
             <input type="tel" name="telefone" min="8" max="13" class="form-control input-lg" placeholder="Seu telefone..." required="true">
           </div>
           <div class="form-group">
-            <textarea name="texto" placeholder="Sua mensagem..." class="form-control input-lg" rows="3" required="true"></textarea>
+            <textarea name="texto" min="20" placeholder="Sua mensagem..." class="form-control input-lg" rows="3" required="true"></textarea>
           </div>
       </div>
       <div class="modal-footer">
