@@ -64,7 +64,7 @@
 <!-- begin:modal-contato -->
 <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="modal-contato" aria-hidden="true">
 <form role="form" action="contato.php" method="POST">
-  <input type="hidden" name="link" value="<?= 'http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]' ?>">
+  <input type="hidden" name="link" value="<?= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
