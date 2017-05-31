@@ -376,17 +376,17 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                     <div class="post-img" style="background: url(img/<?= $corretor['FOTO'] ?>);"></div>
                     <div class="post-content list-agent">
                       <div class="heading-title">
-                        <h2><a href="#"><?= $corretor['NOME'] ?></a></h2>
+                        <h2><?= $corretor['NOME'] ?></h2>
                       </div>
                       <div class="post-meta">
-                        <span><i class="fa fa-phone"></i> <a href="tel:"><?= $corretor['TELEFONE'] ?></a></span><br>
+                        <span><i class="fa fa-phone"></i> <b><a href="tel:<?= $corretor['TELEFONE'] ?>"><?= $corretor['TELEFONE'] ?></a></b></span><br>
                         <?php if ( !empty($corretor['SKYPE']) ){ ?>
-                          <span><i class="fa fa-skype"></i> <a href="skype:<?= $corretor['SKYPE'] ?>?chat"><?= $corretor['SKYPE'] ?></a></span><br>
+                          <span><i class="fa fa-skype"></i> <b><a href="skype:<?= $corretor['SKYPE'] ?>?chat"><?= $corretor['SKYPE'] ?></a></b></span><br>
                         <?php } ?>
                         <?php if ( !empty($corretor['WHATSAPP']) ){ ?>
-                          <span><i class="fa fa-whatsapp"></i> <a href="whatsapp://send?text=Olá <?= $corretor['NOME'] ?>!&phone=+55<?= $corretor['WHATSAPP'] ?>"><?= $corretor['WHATSAPP'] ?></a></span><br>
+                          <span><i class="fa fa-whatsapp"></i> <b><a href="whatsapp://send?text=Olá <?= $corretor['NOME'] ?>!&phone=+55<?= $corretor['WHATSAPP'] ?>"><?= $corretor['WHATSAPP'] ?></b></span><br>
                         <?php } ?>
-                        <span><i class="fa fa-envelope-o"></i> <?= $corretor['EMAIL'] ?></span>
+                        <span><i class="fa fa-envelope-o"></i> <b><?= $corretor['EMAIL'] ?></b></span>
                       </div>
                     </div>
                   </div>
