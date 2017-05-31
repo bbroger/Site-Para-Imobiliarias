@@ -300,15 +300,15 @@ array_rand($imobiliaria_corretores);
                           </div>
                           <div class="team-description">
                             <h3><?= $imobiliaria_corretores[0]['NOME'] ?></h3>
-                            <p><i class="fa fa-phone"></i> Telefone : <?= $imobiliaria_corretores[0]['TELEFONE'] ?><br>
+                            <p><i class="fa fa-phone"></i> Telefone : <b><?= $imobiliaria_corretores[0]['TELEFONE'] ?></b><br>
                             <?php if ( !empty($imobiliaria_corretores[0]['WHATSAPP']) ){ ?>
-                              <i class="fa fa-whatsapp"></i> Whatsapp : <?= $imobiliaria_corretores[0]['WHATSAPP'] ?><br>
+                              <i class="fa fa-whatsapp"></i> Whatsapp : <b><?= $imobiliaria_corretores[0]['WHATSAPP'] ?></b><br>
                             <?php } ?>
                             <?php if ( !empty($imobiliaria_corretores[0]['SKYPE']) ){ ?>
-                              <i class="fa fa-skype"></i> Whatsapp : <?= $imobiliaria_corretores[0]['SKYPE'] ?><br>
+                              <i class="fa fa-skype"></i> Skype : <b><?= $imobiliaria_corretores[0]['SKYPE'] ?></b><br>
                             <?php } ?>
-                            <i class="fa fa-print"></i> E-Mail : <?= $imobiliaria_corretores[0]['EMAIL'] ?></p>
-                            <p>Fique à vontade para entrar em contato conosco, e tirar todas as suas dúvidas sobre este imóvel.</p>
+                            <i class="fa fa-print"></i> E-Mail : <b><?= $imobiliaria_corretores[0]['EMAIL'] ?></b></p>
+                            <p><b>Fique à vontade para entrar em contato conosco, e tirar todas as suas dúvidas sobre este imóvel.</b></p>
                             <div class="team-social">
                               <span><a href="<?= $imobiliaria_facebook ?>" target="_blank" title="Facebook" rel="tooltip" data-placement="top"><i class="fa fa-facebook"></i></a></span>
                               <span><a href="mailto:<?= $imobiliaria_corretores[0]['EMAIL'] ?>" target="_blank" title="Email" rel="tooltip" data-placement="top"><i class="fa fa-envelope"></i></a></span> 
