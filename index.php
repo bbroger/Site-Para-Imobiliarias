@@ -308,7 +308,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                       <div class="post-content">
                         <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>">
                           <span><i class="fa fa-home"></i> <?= $imovel->AREA_TERRENO ?> m<sup>2</sup></span><br/>
-                          <small><?= $imovel->BAIRRO ?></small><br/>
+                          <b><small><?= $imovel->BAIRRO ?></small></b><br/>
                           <small><b><?= formataDinheiro($imovel->VALOR) ?></b></small>
                         </a>
                         <div class="heading-title">&nbsp;</div>
@@ -343,7 +343,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                         <a href="<?= $imobiliaria_site ?>/imovel.php?codigo=<?= $imovel->COD_IMOVEL ?>">
                           <span><i class="fa fa-home"></i> <?= $imovel->AREA_TERRENO ?> m<sup>2</sup> / </span>
                           <span><i class="fa fa-hdd-o"></i> <?= $imovel->DORMITORIOS ?> Sala</span><br/>
-                          <small><?= $imovel->BAIRRO ?></small><br/>
+                          <b><small><?= $imovel->BAIRRO ?></small></b><br/>
                           <small><b><?= formataDinheiro($imovel->VALOR) ?></b></small>
                         </a>
                           <div class="heading-title">&nbsp;</div>
