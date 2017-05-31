@@ -39,7 +39,7 @@ $(document).ready(function(){
         cursorwidth: '10px',
         cursorborder: '1px solid #434a54',
         cursoropacitymax: 0.9,                
-        scrollspeed: 200,
+        scrollspeed: 500,
         zindex: 1060
     });
 
@@ -144,7 +144,7 @@ $(document).ready(function(){
     $('[rel="tooltip"]').tooltip();
 
 
-    /* map contact */
+    /* map contact 
     $("#map").gmap3({
         map: {
             options: {
@@ -163,6 +163,7 @@ $(document).ready(function(){
             }
          }
     });
+    */
 
 
     /* carousel single */

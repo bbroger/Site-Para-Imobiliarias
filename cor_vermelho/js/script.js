@@ -145,7 +145,7 @@ $(document).ready(function(){
     $('[rel="tooltip"]').tooltip();
 
 
-    /* map contact */
+    /* map contact 
     $("#map").gmap3({
         map: {
             options: {
@@ -164,6 +164,7 @@ $(document).ready(function(){
             }
          }
     });
+    */
 
 
     /* carousel single */
