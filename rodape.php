@@ -2,7 +2,7 @@
 <div id="footer">
     <div class="container">
     <div class="row">
-        <div align="center"><?= $imobiliaria_mensagem_rodape ?></div>
+        <div align="center"><h2><?= $imobiliaria_mensagem_rodape ?></h2></div>
         <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="widget">
             <h3>Busca Rápida</h3>
@@ -38,6 +38,9 @@
             <a href="https://www.google.com/maps/place/<?= str_replace(" ","+",$imobiliaria_endereco) ?>,+Brasil" target="_blank"><?= $imobiliaria_endereco ?></a><br>
             <br>
             Tel. : <b><?= $imobiliaria_telefone ?></b><br>
+            <?php if ( !empty($imobiliaria_skype) ){ ?>
+            Skype. : <b><?= $imobiliaria_skype ?></b><br>
+            <?php } ?>
             Email : <b><?= $imobiliaria_email ?></b>
             </address>
         </div>

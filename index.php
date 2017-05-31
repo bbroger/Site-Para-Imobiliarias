@@ -380,7 +380,12 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                       </div>
                       <div class="post-meta">
                         <span><i class="fa fa-phone"></i> <a href="tel:"><?= $corretor['TELEFONE'] ?></a></span><br>
-                        <span><i class="fa fa-whatsapp"></i> <a href="whatsapp://send?text=Olá <?= $corretor['NOME'] ?>!&phone=+55<?= $corretor['WHATSAPP'] ?>"><?= $corretor['WHATSAPP'] ?></a></span><br>
+                        <?php if ( !empty($corretor['SKYPE']) ){ ?>
+                          <span><i class="fa fa-skype"></i> <a href="skype:<?= $corretor['SKYPE'] ?>?chat"><?= $corretor['SKYPE'] ?></a></span><br>
+                        <?php } ?>
+                        <?php if ( !empty($corretor['WHATSAPP']) ){ ?>
+                          <span><i class="fa fa-whatsapp"></i> <a href="whatsapp://send?text=Olá <?= $corretor['NOME'] ?>!&phone=+55<?= $corretor['WHATSAPP'] ?>"><?= $corretor['WHATSAPP'] ?></a></span><br>
+                        <?php } ?>
                         <span><i class="fa fa-envelope-o"></i> <?= $corretor['EMAIL'] ?></span>
                       </div>
                     </div>

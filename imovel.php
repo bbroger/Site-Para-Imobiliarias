@@ -301,13 +301,23 @@ array_rand($imobiliaria_corretores);
                           <div class="team-description">
                             <h3><?= $imobiliaria_corretores[0]['NOME'] ?></h3>
                             <p><i class="fa fa-phone"></i> Telefone : <?= $imobiliaria_corretores[0]['TELEFONE'] ?><br>
-                            <i class="fa fa-whatsapp"></i> Whatsapp : <?= $imobiliaria_corretores[0]['WHATSAPP'] ?><br>
+                            <?php if ( !empty($imobiliaria_corretores[0]['WHATSAPP']) ){ ?>
+                              <i class="fa fa-whatsapp"></i> Whatsapp : <?= $imobiliaria_corretores[0]['WHATSAPP'] ?><br>
+                            <?php } ?>
+                            <?php if ( !empty($imobiliaria_corretores[0]['SKYPE']) ){ ?>
+                              <i class="fa fa-skype"></i> Whatsapp : <?= $imobiliaria_corretores[0]['SKYPE'] ?><br>
+                            <?php } ?>
                             <i class="fa fa-print"></i> E-Mail : <?= $imobiliaria_corretores[0]['EMAIL'] ?></p>
-                            <p>Fique à vontade para entrar em contato comigo, e tirar todas as suas dúvidas sobre este imóvel.</p>
+                            <p>Fique à vontade para entrar em contato conosco, e tirar todas as suas dúvidas sobre este imóvel.</p>
                             <div class="team-social">
                               <span><a href="<?= $imobiliaria_facebook ?>" target="_blank" title="Facebook" rel="tooltip" data-placement="top"><i class="fa fa-facebook"></i></a></span>
                               <span><a href="mailto:<?= $imobiliaria_corretores[0]['EMAIL'] ?>" target="_blank" title="Email" rel="tooltip" data-placement="top"><i class="fa fa-envelope"></i></a></span> 
-                              <span><a href="whatsapp://send?text=Olá <?= $imobiliaria_corretores[0]['NOME'] ?>!&phone=+55<?=$imobiliaria_corretores[0]['WHATSAPP'] ?>" target="_blank" title="Whatsapp" rel="tooltip" data-placement="top"><i class="fa fa-whatsapp"></i></a></span> 
+                              <?php if ( !empty($imobiliaria_corretores[0]['WHATSAPP']) ){ ?>
+                                <span><a href="whatsapp://send?text=Olá <?= $imobiliaria_corretores[0]['NOME'] ?>!&phone=+55<?=$imobiliaria_corretores[0]['WHATSAPP'] ?>" target="_blank" title="Whatsapp" rel="tooltip" data-placement="top"><i class="fa fa-whatsapp"></i></a></span> 
+                              <?php } ?>
+                              <?php if ( !empty($imobiliaria_corretores[0]['SKYPE']) ){ ?>
+                                <span><a href="skype:<?= $imobiliaria_corretores[0]['SKYPE'] ?>?chat" target="_blank" title="Skype" rel="tooltip" data-placement="top"><i class="fa fa-skype"></i></a></span> 
+                              <?php } ?>
                             </div>                     
                           </div>
                         </div>
