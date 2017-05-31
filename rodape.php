@@ -2,7 +2,7 @@
 <div id="footer">
     <div class="container">
     <div class="row">
-        <div align="center"><h2><?= $imobiliaria_mensagem_rodape ?></h2></div>
+        <div align="center"><h4><?= $imobiliaria_mensagem_rodape ?></h4></div>
         <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="widget">
             <h3>Busca Rápida</h3>
