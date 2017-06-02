@@ -37,6 +37,10 @@ $imovel = $api->get("imovel", ['transform' => '1', 'token' => $token,
 $imovel = recuperaArray($imovel);
 $imovel = $imovel->imovel[0];
 
+if ( empty($imovel) ){
+  die("O imóvel ".$codigo." ainda não está online... Aguarde a exportação do sistema interno se caso este imóvel foi cadastrado em até 1h.");
+}
+
 $fotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FOTO,ncs,_60_', 'COD_IMOVEL,eq,'.$codigo), 
                 'order[]'=>'foto,asc',
@@ -64,7 +68,7 @@ array_rand($imobiliaria_corretores);
     <meta name="keywords" content="Imóvel, <?= $imobiliaria_chaves ?>" />
     <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="IMÓVEL NO BAIRRO <?= $imovel->BAIRRO .' ('. $imovel->CIDADE .') '. formataDinheiro($imovel->VALOR) ?>" />
+    <meta property="og:title" content="IMÓVEL NO BAIRRO <?= $imovel->BAIRRO .' ('. $imovel->CIDADE .')' ?>" />
     <meta property="og:description" content="<?= $imovel->DESCRICAO ?>" />
     <meta property="og:image" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; ?>/fotos_imoveis/<?= getFotoFachada($imovel->ID_IMOVEL) ?>" />
     <meta property="fb:app_id" content="1496712770565168"/>
