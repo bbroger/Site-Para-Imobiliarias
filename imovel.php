@@ -38,7 +38,7 @@ $imovel = recuperaArray($imovel);
 $imovel = $imovel->imovel[0];
 
 if ( empty($imovel) ){
-  die("O imóvel ".$codigo." ainda não está online... Aguarde a exportação do sistema interno se caso este imóvel foi cadastrado em até 1h.");
+  die("ERRO: O imóvel ".$codigo." ainda não está online... Aguarde a exportação do sistema interno. (Geralmente 30min)");
 }
 
 $fotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
