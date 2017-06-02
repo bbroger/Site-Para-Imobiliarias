@@ -38,6 +38,12 @@ $imovel = recuperaArray($imovel);
 $imovel = $imovel->imovel[0];
 
 if ( empty($imovel) ){
+  echo '
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="ERRO!" />
+      <meta property="og:description" content="O imóvel '.$codigo.' ainda não está online..." />
+      <meta property="fb:app_id" content="1496712770565168"/>
+  ';
   die("ERRO: O imóvel ".$codigo." ainda não está online... Aguarde a exportação do sistema interno. (Geralmente 30min)");
 }
 
