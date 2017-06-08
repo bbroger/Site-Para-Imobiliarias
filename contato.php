@@ -1,6 +1,6 @@
 <?php
 
-    require "configuracao.php";
+    require "arquivo_c.php";
     require "utilitario.php"; 
 
     if ( empty($_POST['link']) )
