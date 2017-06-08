@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <img src="<?= $imobiliaria_logo_pequeno ?>" class="img-responsive" style="padding-top: 20px;">
+      <a href="index.php"><img src="<?= $imobiliaria_logo_pequeno ?>" class="img-responsive" style="padding-top: 20px;"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
