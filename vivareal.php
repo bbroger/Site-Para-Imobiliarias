@@ -49,7 +49,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         ?>
         <TransactionType><?= $finalidade ?></TransactionType>
         <Media>
-            <Item medium="image" caption="img1" primary="true"><?= $imobiliaria_site .'/fotos_imoveis/'. getFotoFachada($imovel->ID_IMOVEL) ?></Item>
+            <Item medium="image" caption="img1" primary="true"><?= str_replace('/bem-vindo','',$imobiliaria_site) .'/fotos_imoveis/'. getFotoFachada($imovel->ID_IMOVEL) ?></Item>
             <?php 
                 $fotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FOTO,ncs,_60_', 'COD_IMOVEL,eq,'. $imovel->COD_IMOVEL ), 
@@ -59,7 +59,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
                 
                 foreach($fotos->fotos as $foto){ ?>
             ?>
-            <Item medium="image" caption="<?= $foto->DESCRICAO ?>"><?= $imobiliaria_site .'/fotos_imoveis/'. strtoupper($foto->FOTO) ?></Item>
+            <Item medium="image" caption="<?= $foto->DESCRICAO ?>"><?= str_replace('/bem-vindo','',$imobiliaria_site) .'/fotos_imoveis/'. strtoupper($foto->FOTO) ?></Item>
             <?php } ?>
         </Media> 
         <Details>
