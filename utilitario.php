@@ -31,7 +31,7 @@
         if ( empty($imoveisFotos->fotos[0]->FOTO) ){ 
             return 'img_coringa.jpg';
         } else {
-            return $imoveisFotos->fotos[0]->FOTO;
+            return strtoupper($imoveisFotos->fotos[0]->FOTO);
         } 
     }
 
