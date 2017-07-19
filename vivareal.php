@@ -25,8 +25,8 @@ $imoveis = $api->get("imovel", ['transform' => '1', 'token' => $token,
                 ]);
 $imoveis = recuperaArray($imoveis);
 
+echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
-<?xml version="1.0" encoding="UTF-8"?>
 <ListingDataFeed xmlns="http://www.vivareal.com/schemas/1.0/VRSync" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.vivareal.com/schemas/1.0/VRSync  http://xml.vivareal.com/vrsync.xsd">
@@ -75,7 +75,7 @@ $imoveis = recuperaArray($imoveis);
             <Country abbreviation="BR">Brasil</Country>
             <State abbreviation="SP">São Paulo</State>
             <City><?= $imovel->CIDADE ?></City>
-            <Zone>Zona Sul</Zone>
+            <Zone><?= $imovel->ENDERECO ?></Zone>
             <Neighborhood><?= $imovel->BAIRRO ?></Neighborhood>
         </Location>
         <ContactInfo>
