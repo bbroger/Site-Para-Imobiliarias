@@ -68,12 +68,12 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 
                 <?php
                     if ($imovel->FINALIDADE == 'VENDA')
-                        echo '<ListPrice currency="BRL">'. (int) $imovel->VALOR .'</ListPrice>';
+                        echo '<ListPrice currency="BRL">'. number_format($imovel->VALOR) .'</ListPrice>';
                     elseif ($imovel->FINALIDADE == 'ALUGUEL')
-                        echo '<RentalPrice currency="BRL" period="Monthly">'. (int) $imovel->VALOR .'</RentalPrice>';
+                        echo '<RentalPrice currency="BRL" period="Monthly">'. number_format($imovel->VALOR) .'</RentalPrice>';
                     else {
-                        echo '<ListPrice currency="BRL">'. $imovel->VALOR .'</ListPrice>';
-                        echo '<RentalPrice currency="BRL" period="Monthly">'. (int) $imovel->VALOR .'</RentalPrice>';
+                        echo '<ListPrice currency="BRL">'. number_format($imovel->VALOR) .'</ListPrice>';
+                        echo '<RentalPrice currency="BRL" period="Monthly">'. number_format($imovel->VALOR) .'</RentalPrice>';
                     }
                               
                 ?>
