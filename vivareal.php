@@ -20,7 +20,7 @@ $cidades = recuperaArray($cidades);
 
 $imoveis = $api->get("imovel", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FINALIDADE,eq,ALUGUEL', 'ANUNCIO,eq,SIM'),
-                'page'=>'1,5',
+                'page'=>'1,20',
                 'order[]'=>'ID_IMOVEL,desc',
                 ]);
 $imoveis = recuperaArray($imoveis);
@@ -63,7 +63,67 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <?php } ?>
         </Media> 
         <Details>
-            <PropertyType><?= $imovel->TIPO ?></PropertyType>
+            <?php
+                $tipo = 'Residential / Home';
+
+                switch ( trim(strtoupper($imovel->TIPO)) ) {
+                    case "APARTAMENTO":
+                        $tipo = 'Residential / Apartment';
+                        break;
+                    case "RESIDENCIA":
+                        $tipo = 'Residential / Home';
+                        break;
+                    case "CHÁCARA":
+                        $tipo = 'Residential / Farm Ranch';
+                        break;
+                    case "CONDOMÍNIO":
+                        $tipo = 'Residential / Condo';
+                        break;
+                    case "FLAT":
+                        $tipo = 'Residential / Flat';
+                        break;
+                    case "LOTEAMENTO":
+                        $tipo = 'Residential / Land Lot';
+                        break;
+                    case "SOBRADO":
+                        $tipo = 'Residential / Sobrado';
+                        break;
+                    case "COBERTURA":
+                        $tipo = 'Residential / Penthouse';
+                        break;
+                    case "KITNET":
+                        $tipo = 'Residential / Kitnet';
+                        break;
+                    case "CONSULTÓRIO":
+                        $tipo = 'Commercial / Consultorio';
+                        break;
+                    case "SALA COMERCIAL":
+                        $tipo = 'Commercial / Office';
+                        break;
+                    case "FAZENDA":
+                        $tipo = 'Commercial / Agricultural';
+                        break;
+                    case "GALPÃO":
+                        $tipo = 'Commercial / Industrial';
+                        break;
+                    case "COMERCIAL":
+                        $tipo = 'Commercial / Building';
+                        break;
+                    case "LOJA":
+                        $tipo = 'Commercial / Loja';
+                        break;
+                    case "TERRENO":
+                        $tipo = 'Commercial / Land Lot';
+                        break;
+                    case "SALA/CONJUNTO":
+                        $tipo = 'Commercial / Business';
+                        break;
+                    case "EDIFÍCIO":
+                        $tipo = 'Commercial / Residential Income';
+                        break;
+                }
+            ?>
+            <PropertyType><?= $tipo ?></PropertyType>
             <Description><![CDATA[<?= $imovel->DESCRICAO ?>]]></Description>
 
                 <?php
