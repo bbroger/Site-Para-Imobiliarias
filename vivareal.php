@@ -67,13 +67,14 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <Description><![CDATA[<?= $imovel->DESCRICAO ?>]]></Description>
 
                 <?php
+                    $valor = number_format($imovel->VALOR);
                     if ($imovel->FINALIDADE == 'VENDA')
-                        echo '<ListPrice currency="BRL">'. number_format($imovel->VALOR) .'</ListPrice>';
+                        echo '<ListPrice currency="BRL">'. $valor .'</ListPrice>';
                     elseif ($imovel->FINALIDADE == 'ALUGUEL')
-                        echo '<RentalPrice currency="BRL" period="Monthly">'. number_format($imovel->VALOR) .'</RentalPrice>';
+                        echo '<RentalPrice currency="BRL" period="Monthly">'. $valor .'</RentalPrice>';
                     else {
-                        echo '<ListPrice currency="BRL">'. number_format($imovel->VALOR) .'</ListPrice>';
-                        echo '<RentalPrice currency="BRL" period="Monthly">'. number_format($imovel->VALOR) .'</RentalPrice>';
+                        echo '<ListPrice currency="BRL">'. $valor .'</ListPrice>';
+                        echo '<RentalPrice currency="BRL" period="Monthly">'. $valor .'</RentalPrice>';
                     }
                               
                 ?>
