@@ -173,7 +173,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         </Location>
         <ContactInfo>
             <Name><?= $imobiliaria_nome ?></Name>
-            <Email><?= $$imobiliaria_email ?></Email>
+            <Email><?= $imobiliaria_email ?></Email>
          </ContactInfo>
         </Listing>
         <?php } ?>
