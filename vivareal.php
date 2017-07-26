@@ -49,7 +49,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         ?>
         <TransactionType><?= $finalidade ?></TransactionType>
         <Media>
-            <Item medium="image" caption="img1" primary="true"><?= str_replace('/bem-vindo','',$imobiliaria_site) .'/fotos_imoveis/'. getFotoFachada($imovel->ID_IMOVEL) ?></Item>
+            <Item medium="image" caption="Fachada" primary="true"><?= str_replace('/bem-vindo','',$imobiliaria_site) .'/fotos_imoveis/'. getFotoFachada($imovel->ID_IMOVEL) ?></Item>
             <?php 
                 $fotos = $api->get("fotos", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FOTO,ncs,_60_', 'COD_IMOVEL,eq,'. $imovel->COD_IMOVEL ), 
@@ -64,9 +64,21 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         </Media> 
         <Details>
             <PropertyType><?= $imovel->TIPO ?></PropertyType>
-            <Description><![CDATA[<?= $imovel->DESCRICAO ?>]]>
-            </Description>
-            <ListPrice currency="BRL"><?= $imovel->VALOR ?></ListPrice>
+            <Description><![CDATA[<?= $imovel->DESCRICAO ?>]]></Description>
+
+                <?php
+                    if ($imovel->FINALIDADE == 'VENDA')
+                        echo '<ListPrice currency="BRL">'. (int) $imovel->VALOR .'</ListPrice>';
+                    elseif ($imovel->FINALIDADE == 'ALUGUEL')
+                        echo '<RentalPrice currency="BRL" period="Monthly">'. (int) $imovel->VALOR .'</RentalPrice>';
+                    else {
+                        echo '<ListPrice currency="BRL">'. $imovel->VALOR .'</ListPrice>';
+                        echo '<RentalPrice currency="BRL" period="Monthly">'. (int) $imovel->VALOR .'</RentalPrice>';
+                    }
+                              
+                ?>
+
+            
             <LivingArea unit="square metres"><?= $imovel->AREA_TERRENO ?></LivingArea>
             <Bedrooms><?= $imovel->DORMITORIOS ?></Bedrooms>
             <Bathrooms><?= $imovel->BANHEIROS ?></Bathrooms>
