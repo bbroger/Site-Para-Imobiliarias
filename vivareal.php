@@ -57,7 +57,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
                 ]);
                 $fotos = recuperaArray($fotos);
                 
-                foreach($fotos->fotos as $foto){ ?>
+                foreach($fotos->fotos as $foto){ 
             ?>
             <Item medium="image" caption="<?= $foto->DESCRICAO ?>"><?= str_replace('/bem-vindo','',$imobiliaria_site) .'/fotos_imoveis/'. strtoupper($foto->FOTO) ?></Item>
             <?php } ?>
