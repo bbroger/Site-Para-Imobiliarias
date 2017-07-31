@@ -146,7 +146,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <Description><![CDATA[<?= $imovel->DESCRICAO ?>]]></Description>
 
             <?php
-                $valor = number_format($imovel->VALOR);
+                $valor = str_replace(',','',number_format($imovel->VALOR));
                 if ($imovel->FINALIDADE == 'VENDA'){
                     echo '<ListPrice currency="BRL">'. $valor .'</ListPrice>';
                 } elseif ($imovel->FINALIDADE == 'ALUGUEL') {
