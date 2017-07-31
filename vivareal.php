@@ -166,10 +166,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <State abbreviation="<?= $imovel->ESTADO ?>">São Paulo</State>
             <City><?= $imovel->CIDADE ?></City>
             <Neighborhood><?= $imovel->BAIRRO ?></Neighborhood>
-            <Country abbreviation="BR">Brasil</Country>
-            <State abbreviation="SP">São Paulo</State>
-            <City>São Paulo</City>
-            <Neighborhood>Consolação</Neighborhood>
         </Location>
         <ContactInfo>
             <Name><?= $imobiliaria_nome ?></Name>
