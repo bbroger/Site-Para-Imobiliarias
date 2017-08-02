@@ -133,6 +133,8 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                                 data-max-options="4" 
                                 data-selected-text-format="count" 
                                 data-max-options="5"
+                                data-live-search="true"
+                                title="TODOS..."
                                 multiple>
                         <option value="">TODOS</option>
                         <?php foreach($bairros as $bairro){ ?>
