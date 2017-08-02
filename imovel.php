@@ -176,7 +176,7 @@ array_rand($imobiliaria_corretores);
                                 title="TODOS..."
                                 multiple>
                         <?php foreach($bairros as $bairro){ ?>
-                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $imovel->BAIRRO? 'selected': '' ?>><?= $bairro->NOME ?></option>
+                          <option value="<?= $bairro->NOME ?>" <?= in_array($bairro->NOME, $_REQUEST['bairro'])? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>

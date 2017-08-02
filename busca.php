@@ -44,10 +44,12 @@ $filter = array('ANUNCIO,eq,SIM');
     array_push($filter, 'CIDADE,eq,'.$_REQUEST['cidade']);
 
   if (!empty($_REQUEST['bairro'])){
-    var_dump($_REQUEST['bairro']);
-    die();
+    $bairros = '';
+    
     foreach($_REQUEST['bairro'] as $bairro)
-      array_push($filter, 'BAIRRO,eq,'.$bairro);
+      $bairros .= $bairro.',';
+      
+    array_push($filter, 'BAIRRO,in,'.$bairros);
   }
   
   if (!empty($_REQUEST['valor'])){
@@ -185,7 +187,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
                                 title="TODOS..."
                                 multiple>
                         <?php foreach($bairros as $bairro){ ?>
-                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $_REQUEST['bairro']? 'selected': '' ?>><?= $bairro->NOME ?></option>
+                          <option value="<?= $bairro->NOME ?>" <?= in_array($bairro->NOME, $_REQUEST['bairro'])? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>

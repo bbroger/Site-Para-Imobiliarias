@@ -135,7 +135,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                                 title="TODOS..."
                                 multiple>
                         <?php foreach($bairros as $bairro){ ?>
-                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $_REQUEST['bairro']? 'selected': '' ?>><?= $bairro->NOME ?></option>
+                          <option value="<?= $bairro->NOME ?>" <?= in_array($bairro->NOME, $_REQUEST['bairro'])? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>
                         </select>
 
