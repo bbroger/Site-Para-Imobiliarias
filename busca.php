@@ -43,8 +43,12 @@ $filter = array('ANUNCIO,eq,SIM');
   if (!empty($_REQUEST['cidade']))
     array_push($filter, 'CIDADE,eq,'.$_REQUEST['cidade']);
 
-  if (!empty($_REQUEST['bairro']))
-    array_push($filter, 'BAIRRO,eq,'.$_REQUEST['bairro']);
+  if (!empty($_REQUEST['bairro'])){
+    var_dump($_REQUEST['bairro']);
+    die();
+    foreach($_REQUEST['bairro'] as $bairro)
+      array_push($filter, 'BAIRRO,eq,'.$bairro);
+  }
   
   if (!empty($_REQUEST['valor'])){
       $valores = explode("-", $_REQUEST['valor']);
@@ -73,6 +77,7 @@ $imoveisResultado = recuperaArray($imoveisResultado);
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -84,7 +89,6 @@ $imoveisResultado = recuperaArray($imoveisResultado);
     <meta property="og:description" content="<?= $imobiliaria_descricao ?>" />
     <meta property="og:image" content="<?= $imobiliaria_logo_facebook ?>" />
     <meta property="fb:app_id" content="1496712770565168"/>
-    <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
     <meta name="robots" content="index,follow">
@@ -92,6 +96,8 @@ $imoveisResultado = recuperaArray($imoveisResultado);
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
@@ -101,8 +107,8 @@ $imoveisResultado = recuperaArray($imoveisResultado);
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 

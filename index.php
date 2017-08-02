@@ -49,6 +49,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta name="google-site-verification" content="<?= $imobiliaria_google_verificacao ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,7 +62,6 @@ $imoveisComercial = recuperaArray($imoveisComercial);
     <meta property="og:description" content="<?= $imobiliaria_descricao ?>" />
     <meta property="og:image" content="<?= $imobiliaria_logo_facebook ?>" />
     <meta property="fb:app_id" content="1496712770565168"/>
-    <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>"/>
     <meta name="robots" content="index,follow">
@@ -69,6 +69,7 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
@@ -78,8 +79,8 @@ $imoveisComercial = recuperaArray($imoveisComercial);
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 

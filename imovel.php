@@ -67,6 +67,7 @@ array_rand($imobiliaria_corretores);
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -78,15 +79,15 @@ array_rand($imobiliaria_corretores);
     <meta property="og:description" content="<?= $imovel->DESCRICAO ?>" />
     <meta property="og:image" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; ?>/fotos_imoveis/<?= getFotoFachada($imovel->ID_IMOVEL) ?>" />
     <meta property="fb:app_id" content="1496712770565168"/>
-    <!-- <meta name="author" content="Celula Digital Software"> -->
     <meta property="article:author" content="<?= $imobiliaria_site ?>"/>
     <link rel="shortcut icon" href="<?= $imobiliaria_logo_favicon ?>">
     <meta name="robots" content="index,follow">
     <title>Imóvel, <?= $imovel->BAIRRO.', '. $imovel->ID_IMOVEL .', '. (in_array("ENDERECO", $imobiliaria_retirar)? '': $imovel->ENDERECO) ?></title>
 
     <!-- Bootstrap core CSS -->
-    <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
@@ -96,8 +97,8 @@ array_rand($imobiliaria_corretores);
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 
@@ -168,7 +169,7 @@ array_rand($imobiliaria_corretores);
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
                         <label for="location">Bairros</label>
-                        <select class="form-control" name='bairro'>
+                        <select class="form-control selectpicker" name='bairro[]' multiple>
                         <option value="">TODOS</option>
                         <?php foreach($bairros as $bairro){ ?>
                           <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $imovel->BAIRRO? 'selected': '' ?>><?= $bairro->NOME ?></option>
