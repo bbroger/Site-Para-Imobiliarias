@@ -63,9 +63,6 @@ $fotosFachada = recuperaArray($fotosFachada);
 
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
-
-  if (empty($_REQUEST['bairro']))
-    $_REQUEST['bairro'] = array();
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -179,7 +176,7 @@ array_rand($imobiliaria_corretores);
                                 title="TODOS..."
                                 multiple>
                         <?php foreach($bairros as $bairro){ ?>
-                          <option value="<?= $bairro->NOME ?>" <?= in_array($bairro->NOME, $_REQUEST['bairro'])? 'selected': '' ?>><?= $bairro->NOME ?></option>
+                          <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $imovel->BAIRRO? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>
                         </select>
                     </div>
