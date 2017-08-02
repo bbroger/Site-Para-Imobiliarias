@@ -45,6 +45,9 @@ $imoveisComercial = $api->get("imovel", ['transform' => '1', 'token' => $token,
                 ]);
 $imoveisComercial = recuperaArray($imoveisComercial);
 
+  if (empty($_REQUEST['bairro']))
+    $_REQUEST['bairro'] = array();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt">

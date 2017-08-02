@@ -63,6 +63,9 @@ $fotosFachada = recuperaArray($fotosFachada);
 
 shuffle($imobiliaria_corretores);
 array_rand($imobiliaria_corretores);
+
+  if (empty($_REQUEST['bairro']))
+    $_REQUEST['bairro'] = array();
 ?>
 <!DOCTYPE html>
 <html lang="pt">
