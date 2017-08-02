@@ -44,12 +44,12 @@ $filter = array('ANUNCIO,eq,SIM');
     array_push($filter, 'CIDADE,eq,'.$_REQUEST['cidade']);
 
   if (!empty($_REQUEST['bairro'])){
-    $bairros = '';
+    $buscaBairros = '';
 
-    foreach($_REQUEST['bairro'] as $bairro)
-      $bairros .= $bairro.',';
+    foreach($_REQUEST['bairro'] as $nomeBairro)
+      $buscaBairros .= $nomeBairro.',';
       
-    array_push($filter, 'BAIRRO,in,'.$bairros);
+    array_push($filter, 'BAIRRO,in,'.$buscaBairros);
   } else 
     $_REQUEST['bairro'] = array();
   
