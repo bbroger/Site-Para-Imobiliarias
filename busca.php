@@ -45,12 +45,13 @@ $filter = array('ANUNCIO,eq,SIM');
 
   if (!empty($_REQUEST['bairro'])){
     $bairros = '';
-    
+
     foreach($_REQUEST['bairro'] as $bairro)
       $bairros .= $bairro.',';
       
     array_push($filter, 'BAIRRO,in,'.$bairros);
-  }
+  } else 
+    $_REQUEST['bairro'] = array();
   
   if (!empty($_REQUEST['valor'])){
       $valores = explode("-", $_REQUEST['valor']);
