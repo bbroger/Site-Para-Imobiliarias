@@ -129,14 +129,11 @@ $imoveisComercial = recuperaArray($imoveisComercial);
                     <div class="form-group">
                         <label for="bairro">Bairros</label>
                         <select class="form-control selectpicker" 
-                                name='bairro[]' 
-                                data-max-options="4" 
+                                name='bairro[]'
                                 data-selected-text-format="count" 
-                                data-max-options="5"
                                 data-live-search="true"
                                 title="TODOS..."
                                 multiple>
-                        <option value="">TODOS</option>
                         <?php foreach($bairros as $bairro){ ?>
                           <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $_REQUEST['bairro']? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>

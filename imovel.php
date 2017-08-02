@@ -169,8 +169,12 @@ array_rand($imobiliaria_corretores);
                   <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="form-group">
                         <label for="location">Bairros</label>
-                        <select class="form-control selectpicker" name='bairro[]' multiple>
-                        <option value="">TODOS</option>
+                        <select class="form-control selectpicker" 
+                                name='bairro[]'
+                                data-selected-text-format="count" 
+                                data-live-search="true"
+                                title="TODOS..."
+                                multiple>
                         <?php foreach($bairros as $bairro){ ?>
                           <option value="<?= $bairro->NOME ?>" <?= $bairro->NOME == $imovel->BAIRRO? 'selected': '' ?>><?= $bairro->NOME ?></option>
                         <?php } ?>
