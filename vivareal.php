@@ -20,7 +20,7 @@ $cidades = recuperaArray($cidades);
 
 $imoveis = $api->get("imovel", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FINALIDADE,eq,ALUGUEL', 'ANUNCIO,eq,SIM'),
-                'page'=>'1,200',
+                'page'=>'1,100',
                 'order[]'=>'ID_IMOVEL,desc',
                 ]);
 $imoveis = recuperaArray($imoveis);
