@@ -64,81 +64,87 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         </Media> 
         <Details>
             <?php
+
+                if ($imovel->AREA_TERRENO <= 0)
+                    $areaNumeroGerado = rand(200,250);
+                else
+                    $areaNumeroGerado = $imovel->AREA_TERRENO;
+
                 $tipo = 'Residential / Home';
-                $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
 
                 switch ( trim(strtoupper($imovel->TIPO)) ) {
                     case "APARTAMENTO":
                         $tipo = 'Residential / Apartment';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "RESIDENCIA":
                         $tipo = 'Residential / Home';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "CHÁCARA":
                         $tipo = 'Residential / Farm Ranch';
-                        $area = '<LotArea unit="square metres">'. $imovel->AREA_TERRENO .'</LotArea>';
+                        $area = '<LotArea unit="square metres">'. $areaNumeroGerado .'</LotArea>';
                         break;
                     case "CONDOMÍNIO":
                         $tipo = 'Residential / Condo';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "FLAT":
                         $tipo = 'Residential / Flat';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "LOTEAMENTO":
                         $tipo = 'Residential / Land Lot';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "SOBRADO":
                         $tipo = 'Residential / Sobrado';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "COBERTURA":
                         $tipo = 'Residential / Penthouse';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "KITNET":
                         $tipo = 'Residential / Kitnet';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "CONSULTÓRIO":
                         $tipo = 'Commercial / Consultorio';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "SALA COMERCIAL":
                         $tipo = 'Commercial / Office';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "FAZENDA":
                         $tipo = 'Commercial / Agricultural';
-                        $area = '<LotArea unit="square metres">'. $imovel->AREA_TERRENO .'</LotArea>';
+                        $area = '<LotArea unit="square metres">'. $areaNumeroGerado .'</LotArea>';
                         break;
                     case "GALPÃO":
                         $tipo = 'Commercial / Industrial';
-                        $area = '<LotArea unit="square metres">'. $imovel->AREA_TERRENO .'</LotArea>';
+                        $area = '<LotArea unit="square metres">'. $areaNumeroGerado .'</LotArea>';
                         break;
                     case "COMERCIAL":
                         $tipo = 'Commercial / Building';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "LOJA":
                         $tipo = 'Commercial / Loja';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "TERRENO":
                         $tipo = 'Commercial / Land Lot';
-                        $area = '<LotArea unit="square metres">'. $imovel->AREA_TERRENO .'</LotArea>';
+                        $area = '<LotArea unit="square metres">'. $areaNumeroGerado .'</LotArea>';
                         break;
                     case "SALA/CONJUNTO":
                         $tipo = 'Commercial / Business';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                     case "EDIFÍCIO":
                         $tipo = 'Commercial / Residential Income';
-                        $area = '<LivingArea unit="square metres">'. $imovel->AREA_TERRENO .'</LivingArea>';
+                        $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
                         break;
                 }
             ?>
