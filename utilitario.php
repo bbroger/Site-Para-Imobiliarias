@@ -46,6 +46,14 @@
     }
 
     function trataString($string = ""){
+        // REMOVER NOMES DE QUADRANTES DOS BAIRROS
+        $string = str_replace("[Q0]", "", $string);
+        $string = str_replace("[Q1]", "", $string);
+        $string = str_replace("[Q2]", "", $string);
+        $string = str_replace("[Q3]", "", $string);
+        $string = str_replace("[Q4]", "", $string);
+        $string = str_replace("[Q5]", "", $string);
+
         return trim(addslashes(strip_tags($string)));
     }
 

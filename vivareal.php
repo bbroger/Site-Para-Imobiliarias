@@ -9,15 +9,6 @@ require "restclient.php";
 
 $api = new RestClient(['base_url' => $api]);
 
-$bairros = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'BAIRROS']);
-$bairros = recuperaArray($bairros);
-
-$tipos = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'MODELOS']);
-$tipos = recuperaArray($tipos);
-
-$cidades = $api->get("imovel", ['transform' => '1', 'token' => $token, 'busca'=>'CIDADES']);
-$cidades = recuperaArray($cidades);
-
 $imoveis = $api->get("imovel", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('FINALIDADE,eq,ALUGUEL', 'ANUNCIO,eq,SIM'),
                 'page'=>'1,100',
@@ -171,7 +162,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <Country abbreviation="BR">Brasil</Country>
             <State abbreviation="<?= $imovel->ESTADO ?>">São Paulo</State>
             <City><?= $imovel->CIDADE ?></City>
-            <Neighborhood><?= $imovel->BAIRRO ?></Neighborhood>
+            <Neighborhood><?= trataString($imovel->BAIRRO) ?></Neighborhood>
         </Location>
         <ContactInfo>
             <Name><?= $imobiliaria_nome ?></Name>
