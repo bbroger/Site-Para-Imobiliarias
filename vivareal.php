@@ -28,7 +28,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     <Listings>
         <?php foreach($imoveis->imovel as $imovel){?>
         <Listing>
-        <ListingID><?= $imovel->ID_IMOVEL ?></ListingID>
+        <ListingID><?= $imovel->COD_IMOVEL ?></ListingID>
         <Title><![CDATA[<?= $imovel->TIPO, ' PARA '. $imovel->FINALIDADE .' '. $imovel->BAIRRO .'. - '. $imovel->ESTADO ?>Apartamento PARA Venda Moema. - São Paulo / SP]]></Title>
         <?php
             if ($imovel->FINALIDADE == 'VENDA')
@@ -140,7 +140,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
                 }
             ?>
             <PropertyType><?= $tipo ?></PropertyType>
-            <Description><![CDATA[<?= $imovel->DESCRICAO ?>]]></Description>
+            <Description><![CDATA[<?= trim($imovel->DESCRICAO .' Código: '.$imovel->COD_IMOVEL) ?>]]></Description>
 
             <?php
                 $valor = str_replace(',','',number_format($imovel->VALOR));
