@@ -58,7 +58,7 @@
     }
 
     function pegaEndereco($endereco = ""){ // Formato do banco: RUA DOUTOR LUIZ COELHO CEP: 14403525
-        return trataString(preg_replace('/( CEP: (\d+/$))/','', $endereco));
+        return trataString(preg_replace('/( CEP: (\d+))/','', $endereco));
     }
 
     function pegaCep($endereco = ""){ // Formato do banco: RUA DOUTOR LUIZ COELHO CEP: 14403525
