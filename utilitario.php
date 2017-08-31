@@ -62,9 +62,9 @@
     }
 
     function pegaCep($endereco = ""){ // Formato do banco: RUA DOUTOR LUIZ COELHO CEP: 14403525
-        preg_match('/( CEP: (\d+/$))/', $endereco, $ceps);
+        preg_match('/( CEP: (\d+))/', $endereco, $ceps);
 
-        if(  preg_match('/^\+\d(\d{5})(\d{3})$/', trim($ceps[2]), $cep ) ){
+        if(  preg_match('/(\d{5})(\d{3})/', trim($ceps[2]), $cep ) ){
             return $cep[1] .'-'. $cep[2];
         } else {
             return '14400-000';

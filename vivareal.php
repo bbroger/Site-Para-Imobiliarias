@@ -163,8 +163,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <State abbreviation="<?= $imovel->ESTADO ?>">São Paulo</State>
             <City><?= $imovel->CIDADE ?></City>
             <Neighborhood><?= trataString($imovel->BAIRRO) ?></Neighborhood>
-            <Address><?= trataString($imovel->ENDERECO) ?></Address> 
-            <StreetNumber><?= pegaEndereco($imovel->NUMERO) ?></StreetNumber> 
+            <Address><?= pegaEndereco($imovel->ENDERECO) ?></Address> 
+            <StreetNumber><?= $imovel->NUMERO ?></StreetNumber> 
             <PostalCode><?= pegaCep($imovel->ENDERECO) ?></PostalCode>
         </Location>
         <ContactInfo>
