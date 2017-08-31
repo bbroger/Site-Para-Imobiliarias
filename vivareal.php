@@ -164,7 +164,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <City><?= $imovel->CIDADE ?></City>
             <Neighborhood><?= trataString($imovel->BAIRRO) ?></Neighborhood>
             <Address><?= trataString($imovel->ENDERECO) ?></Address> 
-            <StreetNumber><?= $imovel->NUMERO ?></StreetNumber>
+            <StreetNumber><?= pegaEndereco($imovel->NUMERO) ?></StreetNumber> 
+            <PostalCode><?= pegaCep($imovel->ENDERECO) ?></PostalCode>
         </Location>
         <ContactInfo>
             <Name><?= $imobiliaria_nome ?></Name>
