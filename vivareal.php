@@ -158,11 +158,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <Bedrooms><?= $imovel->DORMITORIOS ?></Bedrooms>
             <Bathrooms><?= $imovel->BANHEIROS ?></Bathrooms>
         </Details>
-        <Location displayAddress="Neighborhood">
+        <Location displayAddress="Street">
             <Country abbreviation="BR">Brasil</Country>
             <State abbreviation="<?= $imovel->ESTADO ?>">São Paulo</State>
             <City><?= $imovel->CIDADE ?></City>
             <Neighborhood><?= trataString($imovel->BAIRRO) ?></Neighborhood>
+            <Address><?= trataString($imovel->ENDERECO) ?></Address> 
+            <StreetNumber><?= $imovel->NUMERO ?></StreetNumber>
         </Location>
         <ContactInfo>
             <Name><?= $imobiliaria_nome ?></Name>
