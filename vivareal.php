@@ -10,10 +10,10 @@ require "restclient.php";
 $api = new RestClient(['base_url' => $api]);
 
 $imoveis = $api->get("imovel", ['transform' => '1', 'token' => $token, 
-                'filter'=> array('FINALIDADE,eq,ALUGUEL', 'ANUNCIO,eq,SIM'),
+                'filter'=> array('ANUNCIO,eq,SIM'),
                 'page'=>'1,100',
                 'order[]'=>'ID_IMOVEL,desc',
-                ]);
+                ]); // 'FINALIDADE,eq,ALUGUEL'
 $imoveis = recuperaArray($imoveis);
 
 echo '<?xml version="1.0" encoding="UTF-8"?>';
