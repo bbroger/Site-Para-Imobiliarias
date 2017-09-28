@@ -11,9 +11,8 @@ $api = new RestClient(['base_url' => $api]);
 
 $imoveis = $api->get("imovel", ['transform' => '1', 'token' => $token, 
                 'filter'=> array('ANUNCIO,eq,SIM'),
-                'page'=>'1,200',
                 'order[]'=>'ID_IMOVEL,desc',
-                ]); // 'FINALIDADE,eq,ALUGUEL'
+                ]); // 'FINALIDADE,eq,ALUGUEL' 'page'=>'1,200',
 $imoveis = recuperaArray($imoveis);
 
 echo '<?xml version="1.0" encoding="UTF-8"?>';
