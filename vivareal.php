@@ -1,7 +1,9 @@
 <?php
 header('Content-type: text/xml');
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
+ini_set('max_execution_time', 0);
+ini_set('memory_limit','3000M');
+ini_set('post_max_size','2000M');
 
 require "arquivo_c.php";
 require "utilitario.php"; 
