@@ -61,7 +61,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
                 //if ($imovel->AREA_CONSTRUIDA <= 0)
                 //    $areaNumeroGerado = rand(200,250);
                 //else
-                    $areaNumeroGerado = $imovel->AREA_CONSTRUIDA;
+                    $areaNumeroGerado = str_replace(',','',number_format($imovel->AREA_CONSTRUIDA));
 
                 $tipo = 'Residential / Home';
                 $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
