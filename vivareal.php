@@ -58,10 +58,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <Details>
             <?php
 
-                if ($imovel->AREA_TERRENO <= 0)
-                    $areaNumeroGerado = rand(200,250);
-                else
-                    $areaNumeroGerado = $imovel->AREA_TERRENO;
+                //if ($imovel->AREA_CONSTRUIDA <= 0)
+                //    $areaNumeroGerado = rand(200,250);
+                //else
+                    $areaNumeroGerado = $imovel->AREA_CONSTRUIDA;
 
                 $tipo = 'Residential / Home';
                 $area = '<LivingArea unit="square metres">'. $areaNumeroGerado .'</LivingArea>';
@@ -160,7 +160,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <Bedrooms><?= $imovel->DORMITORIOS ?></Bedrooms>
             <Bathrooms><?= $imovel->BANHEIROS ?></Bathrooms>
         </Details>
-        <Location displayAddress="Street">
+        <Location displayAddress="Neighborhood">
             <Country abbreviation="BR">Brasil</Country>
             <State abbreviation="<?= $imovel->ESTADO ?>">São Paulo</State>
             <City><?= $imovel->CIDADE ?></City>
