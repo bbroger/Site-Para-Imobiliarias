@@ -31,7 +31,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <?php foreach($imoveis->imovel as $imovel){?>
         <Listing>
         <ListingID><?= $imovel->COD_IMOVEL ?></ListingID>
-        <Title><![CDATA[<?= $imovel->TIPO .' PARA '. $imovel->FINALIDADE .' '. $imovel->BAIRRO .'. - '. $imovel->ESTADO ?>]]></Title>
+        <Title><![CDATA[<?= $imovel->TIPO .' PARA '. $imovel->FINALIDADE .' EM '. $imovel->BAIRRO .' - '. $imovel->ESTADO ?>]]></Title>
         <?php
             if ( strlen(trim($imovel->DOCUMENTOS)) >= 100 )
                 echo "<Featured>true</Featured>";
