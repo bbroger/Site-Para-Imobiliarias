@@ -31,8 +31,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <?php foreach($imoveis->imovel as $imovel){?>
         <Listing>
         <ListingID><?= $imovel->COD_IMOVEL ?></ListingID>
-        <Title><![CDATA[<?= $imovel->TIPO, ' PARA '. $imovel->FINALIDADE .' '. $imovel->BAIRRO .'. - '. $imovel->ESTADO ?>Apartamento PARA Venda Moema. - São Paulo / SP]]></Title>
+        <Title><![CDATA[<?= $imovel->TIPO .' PARA '. $imovel->FINALIDADE .' '. $imovel->BAIRRO .'. - '. $imovel->ESTADO ?>]]></Title>
         <?php
+            if ( strlen(trim($imovel->DOCUMENTOS)) >= 100 )
+                echo "<Featured>true</Featured>";
+
             if ($imovel->FINALIDADE == 'VENDA')
                 $finalidade = 'For Sale';
             elseif ($imovel->FINALIDADE == 'ALUGUEL')
@@ -159,6 +162,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             <?= $area ?>
             <Bedrooms><?= $imovel->DORMITORIOS ?></Bedrooms>
             <Bathrooms><?= $imovel->BANHEIROS ?></Bathrooms>
+            <Suites><?= $imovel->SUITE ?></Suites>
+            <Garage type="Parking Space"><?= $imovel->GARAGEM ?></Garage>
         </Details>
         <Location displayAddress="Neighborhood">
             <Country abbreviation="BR">Brasil</Country>
